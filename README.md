@@ -1,1 +1,2 @@
-# sc-b2c-web-vue3-vite
+# node version
+v16.9.1
