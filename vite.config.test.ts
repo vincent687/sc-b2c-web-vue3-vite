@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite'
+
 import vue from '@vitejs/plugin-vue'
-import path from 'path'
+import viteTestPlugin from 'vite-plugin-test'
 import { viteMockServe } from 'vite-plugin-mock'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  alias: {
-    '/@/': path.resolve('src'),
-    '/@components/': path.resolve('./src/components')
-  },
   plugins: [
     vue(),
+    viteTestPlugin({
+      watch: true
+    }),
     viteMockServe({
       mockPath: 'mock',
       localEnabled: true,
