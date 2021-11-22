@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { useRoute } from 'vue-router'
-  import ImageViewer from '../components/postDetail/imageViewer.vue'
-  import Detail from '../components/postDetail/detail.vue'
+  import ImageViewer from '../components/postDetail/ImageViewer.vue'
+  import Detail from '../components/postDetail/Detail.vue'
   import { onMounted, ref } from 'vue'
 
   import { getPostDetail } from '../api/post'
