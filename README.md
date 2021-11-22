@@ -1,4 +1,6 @@
-# Recipes
+# Social Career B2C Web PoC
+
+## Tech recipes
 
 - node 16.9.1
 - npm 7.21.1
