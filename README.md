@@ -8,6 +8,8 @@
 - vite 2.6.4
 - vue: 3.2.16
 
+[How this project created](./docs/How_This_Project_Created.md)
+
 ## First time setup
 
 ```sh
@@ -48,11 +50,17 @@ yarn test:e2e:ci
 
 ## SFC
 
+https://v3.vuejs.org/api/sfc-script-setup.html#basic-syntax
+
 code example
 
 ```vue
 TBC
 ```
+
+## Teleport
+
+https://v3.vuejs.org/api/built-in-components.html#teleport
 
 # TODOs
 

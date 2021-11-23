@@ -1,21 +1,20 @@
 <script setup lang="ts">
-  import { useRoute } from 'vue-router'
-  import ImageViewer from '../components/postDetail/ImageViewer.vue'
-  import Detail from '../components/postDetail/Detail.vue'
-  import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
+import ImageViewer from '../components/postDetail/ImageViewer.vue'
+import Detail from '../components/postDetail/Detail.vue'
+import { onMounted, ref } from 'vue'
 
-  import { getPostDetail } from '../api/post'
+import { getPostDetail } from '../api/post'
 
-  const route = useRoute()
-  let post = ref({})
-  onMounted(() => {
-    const id = route.params.id
+const route = useRoute()
+let post = ref({})
+onMounted(() => {
+  const id = route.params.id
 
-    getPostDetail(parseInt(id[0])).then((res) => {
-      debugger
-      post.value = res.data
-    })
+  getPostDetail(parseInt(id[0])).then((res) => {
+    post.value = res.data
   })
+})
 </script>
 
 <template>

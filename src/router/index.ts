@@ -1,7 +1,10 @@
-import { createWebHistory, createRouter, RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
-import HelloWorld from '../pages/Home/Index.vue'
-import PostDetail from '../pages/postDetail.vue'
+
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+
+import HelloWorld from '@pages/home/index.vue'
+import JobListing from '@pages/job_listing/index.vue'
+import PostDetail from '@pages/postDetail.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -11,8 +14,13 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/postDetail/:id',
-    name: 'postDetai',
+    name: 'postDetail',
     component: PostDetail
+  },
+  {
+    path: '/job',
+    name: 'JobListing',
+    component: JobListing
   }
   // {
   //   path: '/about',
