@@ -4,13 +4,13 @@
       <a class="flex items-center hover:opacity-70 transition duration-300 ease-in-out" href="/">
         <img
           class="mr-2"
-          height="36px"
-          width="36px"
-          alt="Jekyll Atlantic Logo"
-          src="../../assets/60bd87606b29dac8e24d1f97_social-career-event-app-logo.png"
+          height="100px"
+          width="100px"
+          alt="social career"
+          src="https://assets.website-files.com/609a7132d3cad3c6ba2c9d85/609a7132d3cad3dda22c9ee9_logo-02.svg"
         />
 
-        <h2 class="text-2xl font-sans font-semibold"><strong>Social Career</strong></h2>
+        <!-- <h2 class="text-2xl font-sans font-semibold"><strong>Social Career</strong></h2> -->
       </a>
     </div>
     <div class="logo-mobile block md:hidden">

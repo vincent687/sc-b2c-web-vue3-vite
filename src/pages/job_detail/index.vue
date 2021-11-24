@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import ImageViewer from '../components/postDetail/ImageViewer.vue'
-import Detail from '../components/postDetail/Detail.vue'
+import ImageViewer from './components/imageViewer.vue'
+import Detail from './components/detail.vue'
 import { onMounted, ref } from 'vue'
 
-import { getPostDetail } from '../api/post'
+import { getPostDetail } from '../../api/post'
 
 const route = useRoute()
 let post = ref({})

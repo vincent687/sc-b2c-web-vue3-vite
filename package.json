@@ -10,7 +10,8 @@
   "dependencies": {
     "axios": "^0.24.0",
     "vue": "^3.2.16",
-    "vue-router": "4"
+    "vue-router": "4",
+    "vue-router-layout": "^0.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",

@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { usePostInject } from '@contexts'
 import { useJobListingInject } from '@contexts/job_listing'
+import Main from './components/main.vue'
 
+const { state: postState, load: loadPosts } = usePostInject()
 const { state, load } = useJobListingInject()
 
-onMounted(() => load())
+onMounted(() => {
+  load(), loadPosts()
+})
 </script>
 
 <template>
@@ -18,6 +23,7 @@ onMounted(() => load())
 
   <div v-else-if="state.status === 'success'">
     {{ state.data.jobs }}
+    <Main :post-state="postState"></Main>
   </div>
 
   <div v-else>

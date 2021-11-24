@@ -6,21 +6,47 @@ import HelloWorld from '@pages/home/index.vue'
 import JobListing from '@pages/job_listing/index.vue'
 import PostDetail from '@pages/postDetail.vue'
 
+import { createRouterLayout } from 'vue-router-layout'
+
+// Create <RouterLayout> component.
+const RouterLayout = createRouterLayout((layout) => {
+  // Resolves a layout component with layout type string.
+  return import('../../layouts/' + layout + '.vue')
+})
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: HelloWorld
+    component: RouterLayout,
+    children: [
+      {
+        path: '',
+        component: () => import('@pages/home/index.vue')
+      }
+    ]
   },
   {
-    path: '/postDetail/:id',
-    name: 'postDetail',
-    component: PostDetail
+    path: '/jobDetail/:id',
+    name: 'JobDetail',
+    component: RouterLayout,
+    children: [
+      {
+        path: '',
+        component: import('@pages/job_detail/index.vue')
+      }
+    ]
   },
   {
     path: '/job',
     name: 'JobListing',
-    component: JobListing
+    component: RouterLayout,
+    children: [
+      {
+        path: '',
+        component: import('@pages/job_listing/index.vue')
+      }
+    ]
   }
   // {
   //   path: '/about',

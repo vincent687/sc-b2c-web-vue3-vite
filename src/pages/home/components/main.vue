@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import Post from '../global/Post.vue'
-  import { onMounted } from 'vue'
-  import { State } from '../../contexts/post'
+import Post from '../../../components/post.vue'
+import { onMounted } from 'vue'
+import { State } from '../../../contexts/post'
 
-  defineProps<{ postState: State }>()
+defineProps<{ postState: State }>()
 </script>
 
 <template>

@@ -12,7 +12,11 @@
         checked="checked"
       />
       <div class="carousel-item absolute opacity-0" style="height: 50vh">
-        <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div>
+        <img
+          class="w-full"
+          src="https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
+        />
+        <!-- <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div> -->
       </div>
       <label
         for="carousel-3"
@@ -81,7 +85,11 @@
         hidden=""
       />
       <div class="carousel-item absolute opacity-0" style="height: 50vh">
-        <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div>
+        <img
+          class="w-full"
+          src="https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
+        />
+        <!-- <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div> -->
       </div>
       <label
         for="carousel-1"
@@ -237,33 +245,33 @@
   </div>
 </template>
 <style>
-  .carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
-  }
-  .carousel-item {
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-  }
-  #carousel-1:checked ~ .control-1,
-  #carousel-2:checked ~ .control-2,
-  #carousel-3:checked ~ .control-3 {
-    display: block;
-  }
-  .carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-  }
-  #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-  #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-  #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
-  }
+.carousel-open:checked + .carousel-item {
+  position: static;
+  opacity: 100;
+}
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+  display: block;
+}
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
+}
 </style>

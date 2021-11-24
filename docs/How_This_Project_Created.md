@@ -31,3 +31,7 @@ yarn add @vue/test-utils@next --dev
 # vue-router-next
 
 yarn add vue-router@4
+
+# vue router layout
+
+https://github.com/ktsn/vue-router-layout

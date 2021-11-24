@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import { onMounted, ref } from 'vue'
-  import { Post } from '../../contexts/post'
+import { onMounted, ref } from 'vue'
+import { Post } from '../../model/post'
 
-  defineProps<{ post: Post }>()
+defineProps<{ post: Post }>()
 </script>
 
 <template>
@@ -69,5 +69,4 @@
       >
     </div>
   </div>
-
 </template>

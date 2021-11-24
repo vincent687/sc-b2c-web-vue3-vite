@@ -1,17 +1,16 @@
 <script setup lang="ts">
-  import { onMounted } from 'vue'
-  import { State } from '../../contexts/_utils'
-  import { Post } from '../../../mock/post/post'
-  import { useRouter } from 'vue-router'
+import { onMounted } from 'vue'
+import { Post } from '../model/post'
+import { useRouter } from 'vue-router'
 
-  defineProps<{ post: Post }>()
-  const router = useRouter()
+defineProps<{ post: Post }>()
+const router = useRouter()
 
-  const goToPostDetail = (id: number) => {
-    router.push({
-      path: `/postDetail/${id}`
-    })
-  }
+const goToPostDetail = (id: number) => {
+  router.push({
+    path: `/jobDetail/${id}`
+  })
+}
 </script>
 
 <template>
