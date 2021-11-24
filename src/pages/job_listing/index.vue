@@ -1,32 +1,31 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { usePostInject } from '@contexts/post'
 import { useJobListingInject } from '@contexts/job_listing'
-import Main from './components/main.vue'
 
-const { state: postState, load: loadPosts } = usePostInject()
+import JobList from './components/JobList.vue'
+import Loading from './components/Loading.vue'
+import Empty from './components/Empty.vue'
+import Unhandled from '@components/Unhandled.vue'
+
 const { state, load } = useJobListingInject()
 
-onMounted(() => {
-  load(), loadPosts('', '')
-})
+onMounted(() => load())
 </script>
 
 <template>
   <div v-if="state.status === 'loading'">
-    <div class="text-xl"> LOADING ........ </div>
+    <Loading />
   </div>
 
   <div v-else-if="state.status === 'empty'">
-    <div class="text-xl"> NO JOBS !!! </div>
+    <Empty />
   </div>
 
   <div v-else-if="state.status === 'success'">
-    {{ state.data.jobs }}
-    <Main :post-state="postState"></Main>
+    <JobList :data="state.data"></JobList>
   </div>
 
   <div v-else>
-    <div class="text-xl"> Unhandled !!! </div>
+    <Unhandled />
   </div>
 </template>

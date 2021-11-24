@@ -1,7 +1,10 @@
 import { computed, inject, provide, readonly, ref, Ref } from 'vue'
 
 export type Job = {
+  uuid: string
   name: string
+  thumbnailImageURL: string
+  tags: { id: number; name: string; color: string }[]
 }
 
 export type Data = {
@@ -41,15 +44,11 @@ export const useJobListingProvide = () => {
       // TODO remove artificial network delay
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      Math.random() > 0.5
+      Math.random() > 0.3
         ? (state.value = {
             status: 'success',
             data: {
-              jobs: [
-                {
-                  name: 'job 1'
-                }
-              ]
+              jobs: fakeJobs()
             }
           })
         : (state.value = {
@@ -76,4 +75,75 @@ export const useJobListingInject = () => {
   }
 
   return jobListingContext
+}
+
+function fakeJobs(): Job[] {
+  return [
+    {
+      uuid: '8080d350-60a7-44bd-a834-d35cef95ef53',
+      name: 'job 1',
+      thumbnailImageURL:
+        'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
+      tags: [
+        {
+          id: 1,
+          name: 'No Poverty',
+          color: 'red'
+        },
+        {
+          id: 2,
+          name: 'Quality Education',
+          color: 'red'
+        },
+        {
+          id: 3,
+          name: 'Decent Work',
+          color: 'red'
+        },
+        {
+          id: 4,
+          name: '導師/教師',
+          color: 'grey'
+        },
+        {
+          id: 5,
+          name: '管理工作',
+          color: 'grey'
+        }
+      ]
+    },
+    {
+      uuid: 'ea4ec1fb-3896-4034-863d-e179b0911f51',
+      name: 'job 2',
+      thumbnailImageURL:
+        'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
+      tags: [
+        {
+          id: 1,
+          name: 'No Poverty',
+          color: 'red'
+        },
+        {
+          id: 2,
+          name: 'Quality Education',
+          color: 'red'
+        },
+        {
+          id: 3,
+          name: 'Decent Work',
+          color: 'red'
+        },
+        {
+          id: 4,
+          name: '導師/教師',
+          color: 'grey'
+        },
+        {
+          id: 5,
+          name: '管理工作',
+          color: 'grey'
+        }
+      ]
+    }
+  ]
 }

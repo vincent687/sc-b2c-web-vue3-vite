@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { Post } from '../model/post'
-import { useRouter } from 'vue-router'
+import { Job } from '@contexts/job_listing'
 
-defineProps<{ post: Post }>()
+defineProps<{ job: Job }>()
 
-const router = useRouter()
-
-const goToPostDetail = (id: number) => {
-  router.push({
-    path: `/jobDetail/${id}`
-  })
-}
+defineEmits<{
+  (e: 'click', uuid: string): void
+}>()
 </script>
 
 <template>
-  <div class="mb-12" @click="goToPostDetail(post.id)">
+  <div class="mb-12" @click="$emit('click', job.uuid)">
     <div class="flex flex-col md:flex-row w-full lg:w-10/12">
       <div class="md:mr-4 mb-2 md:mb-0 md:w-4/12">
         <div class="bg-gray-100">
@@ -24,13 +18,13 @@ const goToPostDetail = (id: number) => {
             height="360"
             class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out"
             alt="thumbnail"
-            :src="post.tumbnail"
+            :src="job.thumbnailImageURL"
         /></div>
       </div>
 
       <div class="flex-1">
         <div class="hover:text-green-400">
-          <h2 class="text-2xl font-semibold mb-1">{{ post.title }}</h2>
+          <h2 class="text-2xl font-semibold mb-1">{{ job.name }}</h2>
         </div>
 
         <p class="text-base font-light text-gray-600 mb-4"
@@ -40,7 +34,7 @@ const goToPostDetail = (id: number) => {
 
         <div class="mb-2">
           <div
-            v-for="tag in post.tags"
+            v-for="tag in job.tags"
             :key="tag.id"
             class="
               p-1
