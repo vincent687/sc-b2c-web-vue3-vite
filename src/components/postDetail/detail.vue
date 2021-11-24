@@ -70,13 +70,4 @@
     </div>
   </div>
 
-  <!-- <main class="py-6">
-
-    <div>
-      {{ post.title }}
-    </div>
-    <div>
-      {{ post.description }}
-    </div>
-  </main> -->
 </template>
