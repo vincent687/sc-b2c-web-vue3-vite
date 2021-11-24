@@ -32,7 +32,6 @@ export const usePostProvide = () => {
 
   const isLoading = computed(() => state.value.status === 'loading')
 
-  debugger
   const loadPosts = async (connection: String, pubkey: String) => {
     if (state.value.status === 'loading') {
       console.warn('still loading, skipping')
@@ -45,9 +44,8 @@ export const usePostProvide = () => {
       // TODO remove artificial network latency
       await new Promise((resolve) => setTimeout(resolve, 500))
       let info = {}
-      debugger
+
       await getPosts({}).then((res) => {
-        debugger
         info = res.data
       })
 
@@ -60,7 +58,6 @@ export const usePostProvide = () => {
     }
   }
 
-  debugger
   provide<Context>(PostSymbol, {
     state: readonly(state),
     isLoading: readonly(isLoading),

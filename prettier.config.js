@@ -3,7 +3,7 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   semi: false,
-  vueIndentScriptAndStyle: true,
+  vueIndentScriptAndStyle: false,
   singleQuote: true,
   quoteProps: 'as-needed',
   bracketSpacing: true,

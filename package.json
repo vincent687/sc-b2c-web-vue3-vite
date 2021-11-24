@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "dotenv": "^10.0.0",
     "vue": "^3.2.16",
     "vue-router": "4"
   },
@@ -19,14 +18,13 @@
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/test-utils": "^2.0.0-rc.16",
     "autoprefixer": "^10.4.0",
+    "dotenv": "^10.0.0",
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "flush-promises": "^1.0.2",
-    "init": "^0.1.2",
     "mockjs": "^1.1.0",
-    "npx": "^10.2.2",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
     "puppeteer": "^11.0.0",
@@ -38,5 +36,6 @@
     "vite-plugin-test": "^0.0.5",
     "vue-eslint-parser": "^8.0.1",
     "vue-tsc": "^0.3.0"
-  }
+  },
+  "license": "MIT"
 }
