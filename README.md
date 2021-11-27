@@ -1,5 +1,17 @@
 # Social Career B2C Web PoC
 
+## User stories
+
+- users in home page can see list of sectons starting from top: hero banner, recommended jobs, latest jobs, hot jobs
+- users in home page can view auto-rotate carousel in section hero banner section
+- users in home page can view 10 jobs at max in sections recommended jobs, latest jobs, hot jobs
+- users in home page can navigate to job full-list page from corresponding jobs sections
+- users in home page can navigate to job details page from individual job card
+- users in job full-list page can lazy load jobs with infinite scroll
+- users in job full-list page can navigate to job details page from individual job card
+- users in job details page can see list of sectons starting from top: hero banner, job title, date, description, TBC
+- users in job details page can sign up a job
+
 ## Tech recipes
 
 - node 16.9.1
