@@ -1,4 +1,4 @@
-# Social Career B2C Web PoC
+# Social Career B2C Web PoT
 
 ## User stories
 
@@ -12,13 +12,25 @@
 - users in job details page can see list of sectons starting from top: hero banner, job title, date, description, TBC
 - users in job details page can sign up a job
 
-## Tech recipes
+## Non functional requirements
 
-- node 16.9.1
-- npm 7.21.1
-- typescript 4.4.3
+- support desktop and mainstream mobile devices
+
+## Prerequisites
+
+- node 16.9.1 / npm 7.21.1 / typescript 4.4.3
 - vite 2.6.4
 - vue: 3.2.16
+
+## Tech recipes
+
+- GraphQL
+- TailwindCSS w/ JIT
+- Vue3 w/ Composition API
+- Vite
+- HeadlessUI
+- Storybook
+- Cypress, Nightwatch
 
 [How this project created](./docs/How_This_Project_Created.md)
 
@@ -76,8 +88,7 @@ https://v3.vuejs.org/api/built-in-components.html#teleport
 
 # TODOs
 
-- [ ] Tailwindcss
-- [ ] Tailwindcss JIT
+- [ ] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
 - [ ] Linter / commit hook
