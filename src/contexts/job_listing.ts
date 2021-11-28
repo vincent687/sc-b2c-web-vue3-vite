@@ -1,18 +1,12 @@
-import { getFields, prepass } from 'gqty'
-import { computed, inject, provide, readonly, ref, Ref } from 'vue'
-import { query, resolved, Job as GqlJob, PaginatedJobs, Maybe } from '../gqty'
+import { getArrayFields, getFields, prepass, selectFields } from 'gqty'
+import { computed, inject, provide, readonly, ref, Ref, triggerRef } from 'vue'
+import { query, resolved, Job as GqlJob, PaginatedJobs, Maybe, inlineResolved } from '../gqty'
 
-export type Job = {
-  uuid: string
-  title: string
-  description?: string
-  thumbnailImageURL: string
-  tags?: { id: number; name: string; color: string }[]
-}
+export type Job = GqlJob
 
 export type Data = {
   jobs: Job[]
-  jobs$: Maybe<PaginatedJobs>
+  jobs$: GqlJob[] //Maybe<PaginatedJobs>
 }
 
 const JobListingSymbol = Symbol()
@@ -35,6 +29,7 @@ export const useJobListingProvide = () => {
   const state = ref<State>({ status: 'init' })
 
   const isLoading = computed(() => state.value.status === 'loading')
+
   const isEmpty = computed(() => state.value.status === 'empty')
 
   const loadJobs = async () => {
@@ -46,18 +41,26 @@ export const useJobListingProvide = () => {
 
     try {
       // TODO remove artificial network delay
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 500))
 
-      const q = query.jobs!({ params: { skip: 0, pageSize: 10 } })
-      const p = q //prepass(q, 'data.title', 'data.description')
-      const r = await resolved(() => p, { noCache: true })
+      const q = query.jobs!({ params: { skip: 0, pageSize: 20 } })
+      // const p = prepass(q, 'data.title', 'data.description')
+      const p = getFields(q, 'data', 'total')
+      const p2 = getArrayFields(p?.data, 'title', 'description')
+      const r = await resolved(() => p2, { noCache: true })
       // const r = await s
 
-      const jobs = (r?.data ?? []).map<Job>((d) => ({
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const jobs = (r ?? []).map<Job>((d) => ({
         title: d.title!,
         uuid: d.id!,
         thumbnailImageURL: ''
       }))
+      state.value = {
+        status: 'success',
+        data: { jobs, jobs$: [] }
+      }
+      // await new Promise((resolve) => setTimeout(resolve, 1000))
 
       // const q = query.job!({ id: 'ad042069-d5d8-483a-8592-67bbf7feaada' })
       // // const p = q //prepass(q, 'data.title', 'data.description')
@@ -73,11 +76,16 @@ export const useJobListingProvide = () => {
       //   }
       // ]
 
-      // console.debug('sss', s)
+      const qq = query.jobs!({ params: { skip: 0, pageSize: 20 } })
+      const pp = getFields(qq, 'data', 'total')
+      const ppr = await resolved(() => pp, { noCache: true, refetch: true })
+      const bb = getArrayFields(ppr?.data, 'title', 'description')
+      const bbr = await resolved(() => bb, { noCache: true })
+      console.debug('bbrbbr', bbr, bbr?.length)
 
       state.value = {
         status: 'success',
-        data: { jobs, jobs$: p }
+        data: { jobs, jobs$: bbr! }
       }
 
       // Math.random() > 0.3

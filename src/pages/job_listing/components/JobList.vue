@@ -7,9 +7,10 @@ defineProps<{ data: Data }>()
 
 <template>
   <main class="py-6">
-    <div v-if="data.jobs$?.data">
-      <div v-for="job in data.jobs$.data">{{job.id!}}</div>
+    <div v-if="data.jobs$">
+      <div v-for="job in data.jobs$">{{job.id!}}</div>
     </div>
+    <div>{{ data.jobs$.length }}</div>
     <JobCard v-for="job in data.jobs" :key="job.uuid" :job="job" />
   </main>
 </template>
