@@ -15,7 +15,7 @@ const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariabl
   variables: {
     params: {
       skip: 0,
-      pageSize: 20
+      pageSize: 3
     }
   }
 })
