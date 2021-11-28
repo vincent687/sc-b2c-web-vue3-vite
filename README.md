@@ -31,6 +31,8 @@
 - HeadlessUI
 - Storybook
 - Cypress, Nightwatch
+- [TODO] Server-side Rendering (SSR)
+- [TODO] Static Site Generation (SSG)
 
 [How this project created](./docs/How_This_Project_Created.md)
 
@@ -64,13 +66,13 @@ yarn test:e2e
 yarn test:e2e:ci
 ```
 
-## TailwindCSS
+# TailwindCSS
 
 - JIT
 - purge
 - headlessui
 
-## Vue3 features
+# Vue3 features
 
 ## SFC
 
@@ -86,12 +88,26 @@ TBC
 
 https://v3.vuejs.org/api/built-in-components.html#teleport
 
+# GraphQL
+
+## client candidates
+
+- [apollo-client](https://github.com/apollographql/apollo-client)
+- [urql](https://github.com/FormidableLabs/urql)
+- [villus](https://villus.logaretm.com/)
+- [gqty](https://gqty.dev/docs/getting-started)
+
+## Debug tools
+
+https://altair.sirmuel.design/
+
 # TODOs
 
 - [ ] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
 - [ ] Linter / commit hook
+- [ ] GraphQL client setup
 - [ ] CICD (Github Actions)
 - [ ] Deploy to staging
 - [ ] Storybook

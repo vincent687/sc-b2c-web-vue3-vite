@@ -5,15 +5,19 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "test": "vite --config vite.config.test.ts"
+    "test": "vite --config vite.config.test.ts",
+    "generate": "gqty generate"
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "gqty": "^2.1.0",
+    "graphql": "^16.0.1",
     "vue": "^3.2.16",
     "vue-router": "4",
     "vue-router-layout": "^0.4.0"
   },
   "devDependencies": {
+    "@gqty/cli": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^1.9.3",

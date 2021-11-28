@@ -24,13 +24,10 @@ defineEmits<{
 
       <div class="flex-1">
         <div class="hover:text-green-400">
-          <h2 class="text-2xl font-semibold mb-1">{{ job.name }}</h2>
+          <h2 class="text-2xl font-semibold mb-1">{{ job.title }}</h2>
         </div>
 
-        <p class="text-base font-light text-gray-600 mb-4"
-          >Learn how to use Markdown to write blog posts. Understand front-matter and how it is used
-          in templates.</p
-        >
+        <p class="text-base font-light text-gray-600 mb-4">{{ job.description }}</p>
 
         <div class="mb-2">
           <div
