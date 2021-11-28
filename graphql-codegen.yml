@@ -1,5 +1,9 @@
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+    
 schema: "http://api.sit.salut.socialcareer.org/graphql"
-documents: './**/*.gql'
+documents: './src/graphql/queries.ts'
 generates:
   ./src/schema.d.ts:
     plugins:
