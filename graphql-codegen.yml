@@ -1,0 +1,9 @@
+schema: "http://api.sit.salut.socialcareer.org/graphql"
+documents: './**/*.gql'
+generates:
+  ./src/schema.d.ts:
+    plugins:
+      - "typescript"
+      - "@graphql-codegen/typescript"
+      - typescript-operations
+  

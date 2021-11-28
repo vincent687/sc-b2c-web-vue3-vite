@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import JobCard from './JobCard.vue'
-import { Data } from '@contexts/job_listing'
+import { ListJobsQuery } from '../../../graphql/schema'
 
-defineProps<{ data: Data }>()
+defineProps<{ data: ListJobsQuery['jobs'] }>()
 </script>
 
 <template>
   <main class="py-6">
-    <div v-if="data.jobs$">
-      <div v-for="job in data.jobs$">{{job.id!}}</div>
-    </div>
-    <div>{{ data.jobs$.length }}</div>
-    <JobCard v-for="job in data.jobs" :key="job.uuid" :job="job" />
+    <JobCard v-for="job in data?.data" :key="job.id!" :job="job" />
   </main>
 </template>

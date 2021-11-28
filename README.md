@@ -74,6 +74,10 @@ yarn test:e2e:ci
 
 # Vue3 features
 
+## Composition API
+
+https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api
+
 ## SFC
 
 https://v3.vuejs.org/api/sfc-script-setup.html#basic-syntax
@@ -90,12 +94,20 @@ https://v3.vuejs.org/api/built-in-components.html#teleport
 
 # GraphQL
 
-## client candidates
+## GraphQL client candidates
 
 - [apollo-client](https://github.com/apollographql/apollo-client)
-- [urql](https://github.com/FormidableLabs/urql)
+- [urql](https://formidable.com/open-source/urql/docs/basics/vue/)
 - [villus](https://villus.logaretm.com/)
 - [gqty](https://gqty.dev/docs/getting-started)
+
+## Types generation
+
+https://villus.logaretm.com/guide/typescript-codgen
+
+https://www.graphql-code-generator.com/docs/getting-started/installation
+
+https://the-guild.dev/blog/graphql-codegen-best-practices
 
 ## Debug tools
 
