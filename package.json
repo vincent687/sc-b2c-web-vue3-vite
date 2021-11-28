@@ -5,15 +5,21 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "test": "vite --config vite.config.test.ts"
+    "test": "vite --config vite.config.test.ts",
+    "generate": "graphql-codegen --config graphql-codegen.yml"
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "graphql": "^16.0.1",
+    "villus": "^1.0.1",
     "vue": "^3.2.16",
     "vue-router": "4",
     "vue-router-layout": "^0.4.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.3.0",
+    "@graphql-codegen/typescript": "^2.4.1",
+    "@graphql-codegen/typescript-operations": "^2.2.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vitejs/plugin-vue": "^1.9.3",
