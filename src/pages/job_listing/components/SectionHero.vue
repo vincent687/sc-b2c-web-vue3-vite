@@ -18,7 +18,7 @@
           <p class="max-w-lg mx-auto text-center text-sm text-black sm:max-w-3xl">
             立即下載手機APP
           </p>
-          <div class="mt-10 flex justify-center">
+          <div class="mt-4 sm:mt-10 flex justify-center">
             <img class="w-32 mx-1" alt="Google Play" src="../../../assets/google-play.svg" />
             <img class="w-32 mx-1" alt="App Store" src="../../../assets/app-store.svg" />
           </div>
