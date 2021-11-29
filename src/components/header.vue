@@ -4,10 +4,10 @@
       <a class="flex items-center hover:opacity-70 transition duration-300 ease-in-out" href="/">
         <img
           class="mr-2"
-          height="100px"
-          width="100px"
+          height="160px"
+          width="160px"
           alt="Social Career"
-          src="../assets/sc-logo.svg"
+          src="../assets/sc-logo-2021.svg"
         />
 
         <!-- <h2 class="text-2xl font-sans font-semibold"><strong>Social Career</strong></h2> -->
@@ -15,7 +15,7 @@
     </div>
     <div class="logo-mobile block md:hidden">
       <a class="flex items-center hover:opacity-70 transition duration-300 ease-in-out" href="/">
-        <img height="100px" width="100px" alt="Social Career" src="../assets/sc-logo.svg" />
+        <img height="160px" width="160px" alt="Social Career" src="../assets/sc-logo-2021.svg" />
 
         <h2 class="text-2xl font-sans font-semibold"></h2>
       </a>

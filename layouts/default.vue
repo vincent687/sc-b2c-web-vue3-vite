@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import Header from '../src/components/header.vue'
 import Footer from '../src/components/footer.vue'
+import Container from '../src/components/Container.vue'
 </script>
 
 <template>
-  <div class="container mx-auto px-6 md:px-4">
+  <Container>
     <Header></Header>
-  </div>
+  </Container>
+
   <router-view />
-  <Footer></Footer>
+
+  <Container>
+    <Footer></Footer>
+  </Container>
 </template>
