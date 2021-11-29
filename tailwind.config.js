@@ -14,7 +14,8 @@ module.exports = {
         gray: colors.trueGray,
         indigo: colors.indigo,
         red: colors.rose,
-        yellow: colors.amber
+        yellow: colors.amber,
+        peach: '#fa9470'
       },
       gridTemplateColumns: {
         'job-slides': 'repeat(1, 300px)'
