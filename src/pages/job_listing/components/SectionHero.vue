@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-peach mb-4 lg:px-40">
+  <div class="bg-peach lg:px-40">
     <div class="grid grid-cols-12">
       <div class="col-span-12 row-start-2 sm:col-span-5 sm:row-start-1">
         <div class="flex h-full justify-center sm:justify-end">

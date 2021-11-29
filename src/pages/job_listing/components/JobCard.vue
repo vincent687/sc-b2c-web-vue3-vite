@@ -18,16 +18,12 @@ defineEmits<{
 <template>
   <div @click="$emit('click', job.id!)">
     <div class="flex flex-col">
-      <img
-        class="w-full rounded-2xl h-56 object-cover mb-3"
-        :alt="job.title"
-        :src="thumbnailUrl!"
-      />
+      <img class="w-full rounded-xl h-56 object-cover mb-3" :alt="job.title" :src="thumbnailUrl!" />
 
-      <div class="text-base font-light text-gray-600 mb-4">{{ job.ngo?.name }}</div>
+      <div class="text-sm font-light text-gray-600 mb-4">{{ job.ngo?.name }}</div>
 
       <div class="hover:text-green-400">
-        <h2 class="text-xl font-semibold">{{ job.title }}</h2>
+        <h2 class="text-lg font-semibold">{{ job.title }}</h2>
       </div>
     </div>
   </div>

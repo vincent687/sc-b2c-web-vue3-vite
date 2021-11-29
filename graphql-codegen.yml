@@ -3,9 +3,10 @@ hooks:
     - prettier --write
     
 schema: "http://api.sit.salut.socialcareer.org/graphql"
+# schema: "https://gateway.api.salut.socialcareer.org/graphql"
 documents: './src/graphql/queries.ts'
 generates:
-  ./src/schema.d.ts:
+  ./src/graphql/schema.d.ts:
     plugins:
       - "typescript"
       - "@graphql-codegen/typescript"

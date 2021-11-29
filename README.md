@@ -68,8 +68,10 @@ yarn test:e2e:ci
 
 # TailwindCSS
 
-- JIT
-- purge
+- [Extracting components](https://tailwindcss.com/docs/extracting-components)
+- [JIT](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css)
+- [purge](https://tailwindcss.com/docs/optimizing-for-production)
+- [dark mode](https://tailwindcss.com/docs/dark-mode)
 - headlessui
 
 # Vue3 features

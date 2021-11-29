@@ -18,13 +18,13 @@ module.exports = {
         peach: '#fa9470'
       },
       gridTemplateColumns: {
-        'job-slides': 'repeat(1, 300px)'
+        'job-slides': 'repeat(1, 200px)'
       },
       gridAutoColumns: {
-        'job-slides': '300px'
+        'job-slides': '200px'
       },
       gridTemplateRows: {
-        'job-slides': 'minmax(340px, 1fr)'
+        'job-slides': 'minmax(250px, 1fr)'
       }
     }
   },

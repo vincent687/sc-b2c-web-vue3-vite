@@ -7,25 +7,39 @@ import Container from '@components/Container.vue'
 <template>
   <SectionHero />
 
-  <Container>
-    <SectionJobSlides
-      :filter-params="{
-        skip: 0,
-        pageSize: 10,
-        filter: {
-          volunteerFunctions: ['FEATURED']
-        }
-      }"
-    />
+  <SectionJobSlides
+    background-color="bg-gray-100"
+    title="Editor Choices"
+    :filter-params="{
+      skip: 0,
+      pageSize: 10,
+      filter: {
+        volunteerFunctions: ['FEATURED']
+      }
+    }"
+  />
 
-    <SectionJobSlides
-      :filter-params="{
-        skip: 0,
-        pageSize: 10,
-        filter: {
-          volunteerFunctions: ['MICRO_VOLUNTEERING']
-        }
-      }"
-    />
-  </Container>
+  <SectionJobSlides
+    title="Visiting"
+    background-color="bg-grey-100"
+    :filter-params="{
+      skip: 0,
+      pageSize: 10,
+      filter: {
+        volunteerFunctions: ['VISIT']
+      }
+    }"
+  />
+
+  <SectionJobSlides
+    title="Happening Now"
+    background-color="bg-yellow-100"
+    :filter-params="{
+      skip: 0,
+      pageSize: 10,
+      filter: {
+        volunteerFunctions: ['MICRO_VOLUNTEERING']
+      }
+    }"
+  />
 </template>

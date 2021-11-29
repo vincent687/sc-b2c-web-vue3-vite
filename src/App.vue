@@ -8,6 +8,7 @@ import { useClient } from 'villus'
 useProvider()
 useClient({
   url: 'http://api.sit.salut.socialcareer.org/graphql'
+  // url: 'https://gateway.api.salut.socialcareer.org/graphql'
 })
 </script>
 

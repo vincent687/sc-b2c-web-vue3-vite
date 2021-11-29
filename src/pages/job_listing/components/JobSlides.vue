@@ -8,7 +8,6 @@ defineProps<{ data: ListJobsQuery['jobs'] }>()
 <template>
   <div
     class="
-      h-96
       grid
       overflow-x-auto overflow-y-hidden
       gap-4
