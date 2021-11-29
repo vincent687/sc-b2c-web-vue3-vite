@@ -15,6 +15,15 @@ module.exports = {
         indigo: colors.indigo,
         red: colors.rose,
         yellow: colors.amber
+      },
+      gridTemplateColumns: {
+        'job-list': 'repeat(1, 300px)'
+      },
+      gridAutoColumns: {
+        'job-list': '300px'
+      },
+      gridTemplateRows: {
+        'job-list': 'minmax(340px, 1fr)'
       }
     }
   },

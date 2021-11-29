@@ -15,7 +15,7 @@ const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariabl
   variables: {
     params: {
       skip: 0,
-      pageSize: 3
+      pageSize: 10
     }
   }
 })
@@ -28,7 +28,8 @@ const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariabl
 
   <div v-else-if="data && data?.jobs?.data">
     <div v-if="data.jobs.data.length > 0">
-      Total: {{ data.jobs.data.length }}
+      <JobList :data="data?.jobs"></JobList>
+
       <JobList :data="data?.jobs"></JobList>
     </div>
 

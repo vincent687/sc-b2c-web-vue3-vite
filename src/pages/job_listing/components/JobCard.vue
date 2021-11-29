@@ -16,25 +16,18 @@ defineEmits<{
 </script>
 
 <template>
-  <div class="mb-12" @click="$emit('click', job.id!)">
-    <div class="flex flex-col md:flex-row w-full lg:w-10/12">
-      <div class="md:mr-4 mb-2 md:mb-0 md:w-4/12">
-        <div class="bg-gray-100">
-          <img
-            width="640"
-            height="360"
-            class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out"
-            alt="thumbnail"
-            :src="thumbnailUrl!"
-        /></div>
-      </div>
+  <div @click="$emit('click', job.id!)">
+    <div class="flex flex-col">
+      <img
+        class="w-full rounded-2xl h-56 object-cover mb-3"
+        :alt="job.title"
+        :src="thumbnailUrl!"
+      />
 
-      <div class="flex-1">
-        <div class="hover:text-green-400">
-          <h2 class="text-2xl font-semibold mb-1">{{ job.title }}</h2>
-        </div>
+      <div class="text-base font-light text-gray-600 mb-4">{{ job.ngo?.name }}</div>
 
-        <p class="text-base font-light text-gray-600 mb-4">{{ job.description }}</p>
+      <div class="hover:text-green-400">
+        <h2 class="text-xl font-semibold">{{ job.title }}</h2>
       </div>
     </div>
   </div>
