@@ -17,13 +17,13 @@ module.exports = {
         yellow: colors.amber
       },
       gridTemplateColumns: {
-        'job-list': 'repeat(1, 300px)'
+        'job-slides': 'repeat(1, 300px)'
       },
       gridAutoColumns: {
-        'job-list': '300px'
+        'job-slides': '300px'
       },
       gridTemplateRows: {
-        'job-list': 'minmax(340px, 1fr)'
+        'job-slides': 'minmax(340px, 1fr)'
       }
     }
   },

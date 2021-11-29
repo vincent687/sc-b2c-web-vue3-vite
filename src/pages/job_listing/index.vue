@@ -2,7 +2,7 @@
 import { useQuery } from 'villus'
 import { FetchJobList } from '@contexts/job_listing'
 
-import JobList from './components/JobList.vue'
+import JobSlides from './components/JobSlides.vue'
 import Loading from './components/Loading.vue'
 import Empty from './components/Empty.vue'
 import Unhandled from '@components/Unhandled.vue'
@@ -28,9 +28,9 @@ const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariabl
 
   <div v-else-if="data && data?.jobs?.data">
     <div v-if="data.jobs.data.length > 0">
-      <JobList :data="data?.jobs"></JobList>
+      <JobSlides :data="data?.jobs"></JobSlides>
 
-      <JobList :data="data?.jobs"></JobList>
+      <JobSlides :data="data?.jobs"></JobSlides>
     </div>
 
     <div v-else>

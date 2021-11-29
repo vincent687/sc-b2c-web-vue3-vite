@@ -12,8 +12,8 @@ defineProps<{ data: ListJobsQuery['jobs'] }>()
       grid
       overflow-x-auto overflow-y-hidden
       gap-4
-      grid-rows-job-list grid-cols-job-list grid-flow-col
-      auto-cols-job-list
+      grid-rows-job-slides grid-cols-job-slides grid-flow-col
+      auto-cols-job-slides
     "
   >
     <div v-for="job in data?.data" :key="job.id!">
