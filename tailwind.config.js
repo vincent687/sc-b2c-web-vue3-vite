@@ -27,7 +27,7 @@ module.exports = {
       },
       gridTemplateRows: {
         'job-slides': 'minmax(250px, 1fr)',
-        'job-slides--md': 'minmax(270px, 1fr)'
+        'job-slides--md': 'minmax(300px, 1fr)'
       }
     }
   },
