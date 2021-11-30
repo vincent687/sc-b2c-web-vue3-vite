@@ -31,6 +31,8 @@
 - HeadlessUI
 - Storybook
 - Cypress, Nightwatch
+- [TODO] Server-side Rendering (SSR)
+- [TODO] Static Site Generation (SSG)
 
 [How this project created](./docs/How_This_Project_Created.md)
 
@@ -64,13 +66,19 @@ yarn test:e2e
 yarn test:e2e:ci
 ```
 
-## TailwindCSS
+# TailwindCSS
 
-- JIT
-- purge
+- [Extracting components](https://tailwindcss.com/docs/extracting-components)
+- [JIT](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css)
+- [purge](https://tailwindcss.com/docs/optimizing-for-production)
+- [dark mode](https://tailwindcss.com/docs/dark-mode)
 - headlessui
 
-## Vue3 features
+# Vue3 features
+
+## Composition API
+
+https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api
 
 ## SFC
 
@@ -82,19 +90,54 @@ code example
 TBC
 ```
 
+### <script setup>
+
+https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+
+## Router v4
+
+https://next.router.vuejs.org/
+
+nested named views
+
+https://next.router.vuejs.org/guide/essentials/named-views.html#nested-named-views
+
 ## Teleport
 
 https://v3.vuejs.org/api/built-in-components.html#teleport
 
+# GraphQL
+
+## GraphQL client candidates
+
+- [apollo-client](https://github.com/apollographql/apollo-client)
+- [urql](https://formidable.com/open-source/urql/docs/basics/vue/)
+- [villus](https://villus.logaretm.com/)
+- [gqty](https://gqty.dev/docs/getting-started)
+
+## Types generation
+
+https://villus.logaretm.com/guide/typescript-codgen
+
+https://www.graphql-code-generator.com/docs/getting-started/installation
+
+https://the-guild.dev/blog/graphql-codegen-best-practices
+
+## Debug tools
+
+https://altair.sirmuel.design/
+
 # TODOs
 
-- [ ] Tailwindcss w/ JIT
+- [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
 - [ ] Linter / commit hook
+- [ ] GraphQL client setup
 - [ ] CICD (Github Actions)
 - [ ] Deploy to staging
 - [ ] Storybook
+- [ ] Custom font
 - [ ] PWA
 - [ ] SSR
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)

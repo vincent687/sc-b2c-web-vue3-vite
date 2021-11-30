@@ -15,8 +15,16 @@ module.exports = {
         indigo: colors.indigo,
         red: colors.rose,
         yellow: colors.amber,
-        blue: colors.blue,
-        green: colors.green
+        peach: '#fa9470'
+      },
+      gridTemplateColumns: {
+        'job-slides': 'repeat(1, 200px)'
+      },
+      gridAutoColumns: {
+        'job-slides': '200px'
+      },
+      gridTemplateRows: {
+        'job-slides': 'minmax(250px, 1fr)'
       }
     }
   },
