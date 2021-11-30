@@ -5,7 +5,7 @@ import { createRouterLayout } from 'vue-router-layout'
 // Create <RouterLayout> component.
 const RouterLayout = createRouterLayout((layout) => {
   // Resolves a layout component with layout type string.
-  return import('../../layouts/' + layout + '.vue')
+  return import('../layouts/' + layout + '.vue')
 })
 
 const routes: RouteRecordRaw[] = [
