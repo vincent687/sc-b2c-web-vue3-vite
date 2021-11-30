@@ -14,9 +14,11 @@ defineEmits<{
     class="
       grid
       overflow-x-auto overflow-y-hidden
+      grid-flow-col
       gap-4
-      grid-rows-job-slides grid-cols-job-slides grid-flow-col
+      grid-rows-job-slides grid-cols-job-slides
       auto-cols-job-slides
+      md:grid-rows-job-slides--md md:grid-cols-job-slides--md md:auto-cols-job-slides--md
     "
   >
     <div v-for="job in data?.data" :key="job.id!">
