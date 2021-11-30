@@ -11,10 +11,10 @@ export default {
 import { ref } from 'vue'
 import { onMounted } from 'vue'
 
-import Main from './components/main.vue'
-import Carousel from '../../components/carousel.vue'
-import Header from '../../components/header.vue'
-import Footer from '../../components/footer.vue'
+import Main from './components/Main.vue'
+import Carousel from '../../components/Carousel.vue'
+import Header from '../../components/Header.vue'
+import Footer from '../../components/Footer.vue'
 
 import { useAccountInject, usePostInject } from '../../contexts'
 

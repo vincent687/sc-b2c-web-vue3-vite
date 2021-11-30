@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Post from '../../../components/post.vue'
+import Post from '../../../components/Post.vue'
 import { onMounted } from 'vue'
 import { State } from '../../../contexts/post'
 

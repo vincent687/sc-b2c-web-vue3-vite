@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import { Post } from '../../model/post'
 
 defineProps<{ post: Post }>()
+
 </script>
 
 <template>

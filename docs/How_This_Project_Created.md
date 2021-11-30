@@ -35,3 +35,11 @@ yarn add vue-router@4
 # vue router layout
 
 https://github.com/ktsn/vue-router-layout
+
+# storybook
+
+npx sb init
+
+# if exist error PostCSS plugin tailwindcss requires PostCSS 8
+
+yarn remove tailwindcss postcss autoprefixer yarn add --dev tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
