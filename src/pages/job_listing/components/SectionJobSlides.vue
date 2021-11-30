@@ -34,7 +34,7 @@ const jobClicked = (uuid: string) => {
 </script>
 
 <template>
-  <div class="pt-10 pb-4" :class="backgroundColor">
+  <div class="pt-10 pb-1" :class="backgroundColor">
     <Container class="h-96">
       <div class="text-2xl mb-3">{{ title }}</div>
 
