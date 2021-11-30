@@ -1,24 +1,50 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import ImageViewer from './components/ImageViewer.vue'
-import Detail from './components/Detail.vue'
-import { onMounted, ref } from 'vue'
 
-import { getPostDetail } from '../../api/post'
+import { useQuery } from 'villus'
+import { FetchJobDetailsQuery, FetchJobDetailsQueryVariables } from '../../graphql/schema'
+import { fetchJobDetailsQuery } from '../../graphql/queries'
+
+import Container from '@components/Container.vue'
+import Loading from '@components/Loading.vue'
+import Error from '@components/Error.vue'
+import Unhandled from '@components/Unhandled.vue'
 
 const route = useRoute()
-let post = ref({})
-onMounted(() => {
-  const id = route.params.id
 
-  getPostDetail(parseInt(id[0])).then((res) => {
-    post.value = res.data
-  })
+const { data, isFetching, error } = useQuery<FetchJobDetailsQuery, FetchJobDetailsQueryVariables>({
+  query: fetchJobDetailsQuery,
+  variables: {
+    id: route.params.id as string
+  }
 })
 </script>
 
 <template>
-  <div class="container w-full md:max-w-3xl text-left mx-auto pt-20">
+  <Container>
+    <div v-if="isFetching">
+      <Loading />
+    </div>
+
+    <div v-else-if="data?.job">
+      <router-link :to="'/jobs'">BACK TO JOBS</router-link>
+      <div class="text-base"> {{ data.job.ngo?.name }}</div>
+      <div class="text-xl"> {{ data.job.title }}</div>
+      <hr />
+      <div class="text-xl"> {{ data.job.description }}</div>
+      <hr />
+    </div>
+
+    <div v-else-if="error">
+      <Error :message="error.message!" />
+    </div>
+
+    <div v-else>
+      <Unhandled />
+    </div>
+  </Container>
+
+  <!-- <div class="container w-full md:max-w-3xl text-left mx-auto pt-20">
     <div
       class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal"
       style="font-family: Georgia, serif"
@@ -39,5 +65,5 @@ onMounted(() => {
 
     <ImageViewer :url="post.image" />
     <Detail :post="post" />
-  </div>
+  </div> -->
 </template>

@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import JobCard from './JobCard.vue'
-import { ListJobsQuery } from '../../../graphql/schema'
+import { FetchJobListQuery } from '../../../graphql/schema'
 
-defineProps<{ data: ListJobsQuery['jobs'] }>()
+defineProps<{ data: FetchJobListQuery['jobs'] }>()
+
+defineEmits<{
+  (e: 'click-job', uuid: string): void
+}>()
 </script>
 
 <template>
@@ -16,7 +20,7 @@ defineProps<{ data: ListJobsQuery['jobs'] }>()
     "
   >
     <div v-for="job in data?.data" :key="job.id!">
-      <JobCard :job="job" />
+      <JobCard :job="job" @click="$emit('click-job', job.id!)" />
     </div>
   </div>
 </template>

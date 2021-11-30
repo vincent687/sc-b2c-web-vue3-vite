@@ -17,7 +17,7 @@ defineEmits<{
 
 <template>
   <div @click="$emit('click', job.id!)">
-    <div class="flex flex-col">
+    <div class="flex flex-col cursor-pointer">
       <img class="w-full rounded-xl h-56 object-cover mb-3" :alt="job.title" :src="thumbnailUrl!" />
 
       <div class="text-sm font-light text-gray-600 mb-4">{{ job.ngo?.name }}</div>
