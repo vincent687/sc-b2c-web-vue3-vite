@@ -8,7 +8,6 @@ documents: './src/graphql/queries.ts'
 generates:
   ./src/graphql/schema.d.ts:
     plugins:
-      - "typescript"
       - "@graphql-codegen/typescript"
       - typescript-operations
   
