@@ -1,25 +1,36 @@
 <script setup lang="ts">
 import { useQuery } from 'villus'
-import { FetchJobList } from '@contexts/job_listing'
+import { useRouter } from 'vue-router'
 
 import JobSlides from './JobSlides.vue'
 import Loading from './Loading.vue'
 import Empty from './Empty.vue'
 import Unhandled from '@components/Unhandled.vue'
 import Error from '@components/Error.vue'
-
-import { FindJobsParams, ListJobsQuery, ListJobsQueryVariables } from '../../../graphql/schema'
 import Container from '@components/Container.vue'
+
+import { FetchJobList } from '@contexts/job_listing'
+import {
+  FindJobsParams,
+  FetchJobListQuery,
+  FetchJobListQueryVariables
+} from '../../../graphql/schema'
+
+const router = useRouter()
 
 const props =
   defineProps<{ backgroundColor: string; title: string; filterParams: FindJobsParams }>()
 
-const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariables>({
+const { data, isFetching, error } = useQuery<FetchJobListQuery, FetchJobListQueryVariables>({
   query: FetchJobList,
   variables: {
     params: props.filterParams
   }
 })
+
+const jobClicked = (uuid: string) => {
+  router.push({ name: 'JobDetails', params: { id: uuid } })
+}
 </script>
 
 <template>
@@ -33,7 +44,7 @@ const { data, isFetching, error } = useQuery<ListJobsQuery, ListJobsQueryVariabl
 
       <div v-else-if="data && data?.jobs?.data">
         <div v-if="data?.jobs?.data!.length! > 0">
-          <JobSlides :data="data?.jobs"></JobSlides>
+          <JobSlides :data="data?.jobs" @click-job="jobClicked" />
         </div>
 
         <div v-else>

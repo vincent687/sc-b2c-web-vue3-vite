@@ -138,6 +138,7 @@ https://altair.sirmuel.design/
 - [ ] Deploy to staging
 - [ ] Storybook
 - [ ] Custom font
+- [ ] i18n
 - [ ] PWA
 - [ ] SSR
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)

@@ -11,7 +11,5 @@ import Container from '@components/Container.vue'
 
   <router-view />
 
-  <Container>
-    <Footer></Footer>
-  </Container>
+  <Footer></Footer>
 </template>
