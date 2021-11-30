@@ -6,7 +6,7 @@
           <img class="w-64 object-contain" alt="Good. For you." src="../../../assets/hero.png" />
         </div>
       </div>
-      <div class="col-span-12 sm:col-span-7">
+      <div class="col-span-12 sm:col-span-6">
         <div class="px-4 py-6 sm:px-6 sm:py-8 lg:py-12 lg:px-8">
           <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
             <span class="block text-black">Good.</span>

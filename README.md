@@ -90,6 +90,18 @@ code example
 TBC
 ```
 
+### <script setup>
+
+https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+
+## Router v4
+
+https://next.router.vuejs.org/
+
+nested named views
+
+https://next.router.vuejs.org/guide/essentials/named-views.html#nested-named-views
+
 ## Teleport
 
 https://v3.vuejs.org/api/built-in-components.html#teleport
@@ -117,7 +129,7 @@ https://altair.sirmuel.design/
 
 # TODOs
 
-- [ ] Tailwindcss w/ JIT
+- [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
 - [ ] Linter / commit hook
@@ -125,6 +137,7 @@ https://altair.sirmuel.design/
 - [ ] CICD (Github Actions)
 - [ ] Deploy to staging
 - [ ] Storybook
+- [ ] Custom font
 - [ ] PWA
 - [ ] SSR
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
