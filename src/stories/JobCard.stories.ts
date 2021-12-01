@@ -2,21 +2,17 @@ import JobCard from './JobCard.vue'
 import { Story } from '@storybook/vue3'
 import '../../.storybook/utils.css'
 
-// More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
   title: 'JobCard',
   component: JobCard,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
     onClick: {},
     job: {},
-    tagColor: { control: 'color' },
     textColor: { control: 'color' }
   }
 }
 
-// More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template: Story<typeof JobCard> = (args) => ({
   // Components used in your story `template` are defined in the `components` object
   components: { JobCard },
@@ -28,137 +24,28 @@ const Template: Story<typeof JobCard> = (args) => ({
   template: '<job-card v-bind="args" />'
 })
 
-export const GreenTag = Template.bind({})
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-GreenTag.args = {
-  tagColor: 'green',
-  job: {
-    id: 1,
-    title: '中六暑期實習生計畫2019',
-    time: '21 Nov',
-    participantCount: '1',
-    participantTotal: '',
-    places: ['全港'],
-    thumbnailImageURL:
-      'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
-    tags: [
-      {
-        id: 1,
-        name: 'No Poverty',
-        color: 'red'
-      },
-      {
-        id: 2,
-        name: 'Quality Education',
-        color: 'red'
-      },
-      {
-        id: 3,
-        name: 'Decent Work',
-        color: 'red'
-      },
-      {
-        id: 4,
-        name: '導師/教師',
-        color: 'grey'
-      },
-      {
-        id: 5,
-        name: '管理工作',
-        color: 'grey'
-      }
-    ]
-  }
-}
-
 export const RedTag = Template.bind({})
 // More on args: https://storybook.js.org/docs/vue/writing-stories/args
 RedTag.args = {
-  tagColor: 'red',
-  job: {
-    id: 1,
-    title: '中六暑期實習生計畫2019',
-    time: '21 Nov',
-    participantCount: '1',
-    participantTotal: '',
-    places: ['全港'],
-    thumbnailImageURL:
-      'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
-    tags: [
-      {
-        id: 1,
-        name: 'No Poverty',
-        color: 'red'
-      },
-      {
-        id: 2,
-        name: 'Quality Education',
-        color: 'red'
-      },
-      {
-        id: 3,
-        name: 'Decent Work',
-        color: 'red'
-      },
-      {
-        id: 4,
-        name: '導師/教師',
-        color: 'grey'
-      },
-      {
-        id: 5,
-        name: '管理工作',
-        color: 'grey'
-      }
-    ]
-  }
-}
-
-export const RedText = Template.bind({})
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-RedText.args = {
   textColor: 'red',
   job: {
-    id: 1,
-    title: '中六暑期實習生計畫2019',
-    time: '21 Nov',
-    participantCount: '1',
-    participantTotal: '',
-    places: ['全港'],
-    thumbnailImageURL:
-      'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
-    tags: [
-      {
-        id: 1,
-        name: 'No Poverty',
-        color: 'red'
-      },
-      {
-        id: 2,
-        name: 'Quality Education',
-        color: 'red'
-      },
-      {
-        id: 3,
-        name: 'Decent Work',
-        color: 'red'
-      },
-      {
-        id: 4,
-        name: '導師/教師',
-        color: 'grey'
-      },
-      {
-        id: 5,
-        name: '管理工作',
-        color: 'grey'
-      }
-    ]
+    id: 'b99c0f6d-1709-48cf-8f92-282946aa50ee',
+    ngo: {
+      id: 601135,
+      name: 'YCS Volunteer'
+    },
+    title: 'Caritas Test Job - Recurring',
+    description: 'This is a test recurring job. ',
+    recipients: ['CHILDREN'],
+    imageUrls: [
+      'https://storage.googleapis.com/salut-sit-bucket/jobs/b99c0f6d-1709-48cf-8f92-282946aa50ee/image_1_1636424787.jpeg'
+    ],
+    quota: 20,
+    remainingQuota: 13,
+    acceptedApplications: 6,
+    pendingApplications: 1,
+    overallStart: '2021-11-09T03:00:00.000Z',
+    overallEnd: '2021-12-31T05:00:00.000Z',
+    location: 'Online'
   }
 }
-
-// export const Small = Template.bind({})
-// Small.args = {
-//   size: 'small',
-//   label: 'Button'
-// }

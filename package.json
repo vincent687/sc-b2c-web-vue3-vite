@@ -6,7 +6,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "test": "vite --config vite.config.test.ts",
-    "generate": "graphql-codegen --config graphql-codegen.yml"
+    "generate": "graphql-codegen --config graphql-codegen.yml",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@vincent687/storybook": "^0.0.0",

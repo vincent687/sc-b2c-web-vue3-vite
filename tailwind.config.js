@@ -15,6 +15,7 @@ module.exports = {
         indigo: colors.indigo,
         red: colors.rose,
         yellow: colors.amber,
+        green: colors.green,
         peach: '#fa9470'
       },
       gridTemplateColumns: {

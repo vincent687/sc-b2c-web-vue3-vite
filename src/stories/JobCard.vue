@@ -1,74 +1,32 @@
 <script setup lang="ts">
 import { reactive, computed } from 'vue'
-import { Job } from '../model/job'
+import { Job } from '@contexts/job_listing'
 
-const props =
-  defineProps<{ job: Job; backgroundColor: String; tagColor: String; textColor: String }>()
+const props = defineProps<{ job: Job; textColor: String }>()
+const thumbnailUrl = computed(() =>
+  props.job.imageUrls
+    ? props.job.imageUrls[0]
+    : 'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg'
+)
+
 const emit = defineEmits(['click'])
 
-const backgroundClasses = computed(() => ({
-  [`bg-${props.backgroundColor}-100`]: true
-}))
-const tagBackgroundClasses = computed(() => ({
-  'p-1': true,
-  'px-3': true,
-  'mb-1': true,
-  'inline-block': true,
-  'text-xs': true,
-  'font-mono': true,
-  rounded: true,
-  'text-green-800': true,
-  'hover:bg-blue-200': true,
-  'hover:text-blue-800': true,
-  transition: true,
-  'duration-300': true,
-  'ease-in-out': true,
-  //  'bg-red-500': true
-  [`bg-${props.tagColor}-500`]: true
-}))
 const textClasses = computed(() => ({
-  'text-base': true,
-  'font-light': true,
-  'mb-4': true,
-  //'text-yellow-600': true,
-  'text-opacity-100': true,
-  [`text-${props.textColor}-600`]: true
+  // 'hover:text-red-400': true
+  [`hover:text-${props.textColor}-400`]: true
 }))
 </script>
 
 <template>
-  <div class="mb-12" @click="$emit('click', job.uuid)">
-    <div class="flex flex-col md:flex-row w-full lg:w-10/12">
-      <div class="md:mr-4 mb-2 md:mb-0 md:w-4/12">
-        <div :class="backgroundClasses">
-          <img
-            width="640"
-            height="360"
-            class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out"
-            alt="thumbnail"
-            :src="job.thumbnailImageURL"
-        /></div>
-      </div>
+  <!-- <div> </div> -->
+  <div @click="$emit('click', job.id!)">
+    <div class="flex flex-col cursor-pointer">
+      <img class="w-full rounded-xl h-56 object-cover mb-3" :alt="job.title" :src="thumbnailUrl!" />
 
-      <div class="flex-1">
-        <div class="hover:text-green-400">
-          <h2 class="text-2xl font-semibold mb-1">{{ job.name }}</h2>
-        </div>
+      <div class="text-sm font-light text-gray-600 mb-1">{{ job.ngo?.name }}</div>
 
-        <p :class="textClasses"
-          >Learn how to use Markdown to write blog posts. Understand front-matter and how it is used
-          in templates.</p
-        >
-
-        <div class="mb-2">
-          <div
-            v-for="tag in job.tags"
-            :key="tag.id"
-            :class="tagBackgroundClasses"
-            href="/category/development"
-            >{{ tag.name }}</div
-          >
-        </div>
+      <div :class="textClasses">
+        <h2 class="text-lg font-semibold">{{ job.title }}</h2>
       </div>
     </div>
   </div>
