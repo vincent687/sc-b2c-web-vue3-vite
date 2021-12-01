@@ -2,7 +2,8 @@
 import { useQuery } from 'villus'
 import { useRouter } from 'vue-router'
 
-import JobSlides from './JobSlides.vue'
+import JobSlides from '@vincent687/storybook/JobSlides.vue'
+// import JobSlides from './JobSlides.vue'
 import Loading from './Loading.vue'
 import Empty from './Empty.vue'
 import Unhandled from '@components/Unhandled.vue'
@@ -37,14 +38,12 @@ const jobClicked = (uuid: string) => {
   <div class="pt-10 pb-1" :class="backgroundColor">
     <Container class="h-96">
       <div class="text-2xl mb-3">{{ title }}</div>
-
       <div v-if="isFetching">
         <Loading />
       </div>
-
       <div v-else-if="data && data?.jobs?.data">
         <div v-if="data?.jobs?.data!.length! > 0">
-          <JobSlides :data="data?.jobs" @click-job="jobClicked" />
+          <JobSlides :jobs="data?.jobs?.data" @click-job="jobClicked" />
         </div>
 
         <div v-else>

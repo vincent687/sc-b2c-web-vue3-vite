@@ -11,7 +11,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@vincent687/storybook": "^0.0.0",
+    "@vincent687/storybook": "^0.1.0",
     "axios": "^0.24.0",
     "graphql": "^16.0.1",
     "villus": "^1.0.1",
