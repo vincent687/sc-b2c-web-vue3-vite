@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import SectionJobSlides from './components/SectionJobSlides.vue'
 import SectionHero from './components/SectionHero.vue'
-
 </script>
 
 <template>
   <SectionHero />
 
+  {{ $t('world') }}
   <SectionJobSlides
     background-color="bg-gray-100"
     title="Editor Choices"

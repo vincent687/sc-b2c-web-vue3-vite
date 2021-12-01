@@ -6,21 +6,23 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "test": "vite --config vite.config.test.ts",
-    "generate": "graphql-codegen --config graphql-codegen.yml"  },
+    "generate": "graphql-codegen --config graphql-codegen.yml"
+  },
   "dependencies": {
     "@vincent687/storybook": "^0.0.0",
     "axios": "^0.24.0",
     "graphql": "^16.0.1",
     "villus": "^1.0.1",
     "vue": "^3.2.16",
+    "vue-i18n": "^9.2.0-beta.22",
     "vue-router": "4",
     "vue-router-layout": "^0.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@graphql-codegen/cli": "2.3.0",
     "@graphql-codegen/typescript": "^2.4.1",
     "@graphql-codegen/typescript-operations": "^2.2.1",
-    "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-essentials": "^6.4.0",
     "@storybook/addon-links": "^6.4.0",
