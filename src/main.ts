@@ -9,12 +9,13 @@ import zh from './locales/zh.json'
 type MessageSchema = typeof enUS
 
 const i18n = createI18n<[MessageSchema], 'en-US' | 'zh'>({
-  locale: 'en-US',
+  locale: 'zh',
   messages: {
     'en-US': enUS,
     zh: zh
   }
 })
+
 const app = createApp(App)
 setupRoutes(app)
 
