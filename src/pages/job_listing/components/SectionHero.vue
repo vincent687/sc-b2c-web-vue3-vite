@@ -13,10 +13,10 @@
             <span class="block text-black">For you.</span>
           </h1>
           <p class="mt-6 max-w-lg mx-auto text-center text-sm text-black sm:max-w-3xl">
-            嘗試新體驗，幫助有需要的人，認識一世的朋友。
+            {{ $t('jobListing.intro') }}
           </p>
           <p class="max-w-lg mx-auto text-center text-sm text-black sm:max-w-3xl">
-            立即下載手機APP
+            {{ $t('jobListing.downloadApp') }}
           </p>
           <div class="mt-4 sm:mt-10 flex justify-center">
             <img class="w-32 mx-1" alt="Google Play" src="../../../assets/google-play.svg" />
