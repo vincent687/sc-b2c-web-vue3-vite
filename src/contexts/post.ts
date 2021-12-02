@@ -2,21 +2,21 @@ import { computed, inject, provide, readonly, Ref, ref } from 'vue'
 import { getPosts } from '../api/post'
 
 export type Data<T> = {
-  pubkey: String
+  pubkey: string
   info: T
 }
 export type Post = {
-  image: String
-  title: String
-  description: String
-  remarks: String
-  date: String
+  image: string
+  title: string
+  description: string
+  remarks: string
+  date: string
 }
 
 export type Context = {
   state: Ref<State>
   isLoading: Ref<boolean>
-  load: (connection: String, pubkey: String) => void
+  load: (connection: string, pubkey: string) => void
 }
 export type State =
   | { status: 'init' }
@@ -32,7 +32,7 @@ export const usePostProvide = () => {
 
   const isLoading = computed(() => state.value.status === 'loading')
 
-  const loadPosts = async (connection: String, pubkey: String) => {
+  const loadPosts = async (connection: string, pubkey: string) => {
     if (state.value.status === 'loading') {
       console.warn('still loading, skipping')
       return

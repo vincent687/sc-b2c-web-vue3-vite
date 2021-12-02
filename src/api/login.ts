@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const getUser = (params: any) => {
+const getUser = () => {
   return Promise.resolve(axios.get('/api/user/getUserInfo'))
 }
 

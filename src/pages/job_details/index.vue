@@ -33,7 +33,7 @@ const { data, isFetching, error } = useQuery<FetchJobDetailsQuery, FetchJobDetai
     <SectionHero :image-urls="data.job.imageUrls" />
 
     <Container>
-      <div class="mt-2"></div>
+      <div class="mt-2" />
 
       <SectionSummary :job="data.job" />
       <Separator />
@@ -41,7 +41,7 @@ const { data, isFetching, error } = useQuery<FetchJobDetailsQuery, FetchJobDetai
       <SectionDescription :job="data.job" />
       <Separator />
 
-      <div class="mb-2"></div>
+      <div class="mb-2" />
     </Container>
   </div>
 

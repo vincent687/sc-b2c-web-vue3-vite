@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineProps, defineEmits } from 'vue'
 import JobCard from './JobCard.vue'
 import { FetchJobListQuery } from '../../../graphql/schema'
 
@@ -21,8 +22,14 @@ defineEmits<{
       md:grid-rows-job-slides--md md:grid-cols-job-slides--md md:auto-cols-job-slides--md
     "
   >
-    <div v-for="job in data?.data" :key="job.id!">
-      <JobCard :job="job" @click="$emit('click-job', job.id!)" />
+    <div
+      v-for="job in data?.data"
+      :key="job.id!"
+    >
+      <JobCard
+        :job="job"
+        @click="$emit('click-job', job.id!)"
+      />
     </div>
   </div>
 </template>

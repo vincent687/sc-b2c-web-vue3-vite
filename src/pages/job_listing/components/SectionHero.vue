@@ -3,7 +3,11 @@
     <div class="grid grid-cols-12">
       <div class="col-span-12 row-start-2 sm:col-span-5 sm:row-start-1">
         <div class="flex h-full justify-center sm:justify-end">
-          <img class="w-64 object-contain" alt="Good. For you." src="../../../assets/hero.png" />
+          <img
+            class="w-64 object-contain"
+            alt="Good. For you."
+            src="../../../assets/hero.png"
+          >
         </div>
       </div>
       <div class="col-span-12 sm:col-span-6">
@@ -19,8 +23,16 @@
             立即下載手機APP
           </p>
           <div class="mt-4 sm:mt-10 flex justify-center">
-            <img class="w-32 mx-1" alt="Google Play" src="../../../assets/google-play.svg" />
-            <img class="w-32 mx-1" alt="App Store" src="../../../assets/app-store.svg" />
+            <img
+              class="w-32 mx-1"
+              alt="Google Play"
+              src="../../../assets/google-play.svg"
+            >
+            <img
+              class="w-32 mx-1"
+              alt="App Store"
+              src="../../../assets/app-store.svg"
+            >
           </div>
         </div>
       </div>

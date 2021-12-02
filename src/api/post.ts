@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const getPosts = (params: any) => {
+const getPosts = () => {
   return axios.get('/api/posts')
 }
 

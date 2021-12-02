@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineProps } from 'vue'
 import { useQuery } from 'villus'
 import { useRouter } from 'vue-router'
 
@@ -34,9 +35,14 @@ const jobClicked = (uuid: string) => {
 </script>
 
 <template>
-  <div class="pt-10 pb-1" :class="backgroundColor">
+  <div
+    class="pt-10 pb-1"
+    :class="backgroundColor"
+  >
     <Container class="h-96">
-      <div class="text-2xl mb-3">{{ title }}</div>
+      <div class="text-2xl mb-3">
+        {{ title }}
+      </div>
 
       <div v-if="isFetching">
         <Loading />
@@ -44,7 +50,10 @@ const jobClicked = (uuid: string) => {
 
       <div v-else-if="data && data?.jobs?.data">
         <div v-if="data?.jobs?.data!.length! > 0">
-          <JobSlides :data="data?.jobs" @click-job="jobClicked" />
+          <JobSlides
+            :data="data?.jobs"
+            @click-job="jobClicked"
+          />
         </div>
 
         <div v-else>

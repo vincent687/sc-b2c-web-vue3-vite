@@ -4,14 +4,14 @@ import { getUser } from '../api/login'
 const AccountSymbol = Symbol()
 
 export type Data<T> = {
-  pubkey: String
+  pubkey: string
   info: T
 }
 
 export type Context = {
   state: Ref<State>
   isLoading: Ref<boolean>
-  load: (connection: String, pubkey: String) => void
+  load: (connection: string, pubkey: string) => void
 }
 
 export type State =
@@ -26,7 +26,7 @@ export const useAccountProvide = () => {
 
   const isLoading = computed(() => state.value.status === 'loading')
 
-  const loadAccount = async (connection: String, pubkey: String) => {
+  const loadAccount = async (connection: string, pubkey: string) => {
     if (state.value.status === 'loading') {
       console.warn('still loading, skipping')
       return

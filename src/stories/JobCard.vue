@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { reactive, computed } from 'vue'
+import { defineProps, defineEmits } from 'vue'
+import { computed } from 'vue'
 import { Job } from '../model/job'
 
 const props =
-  defineProps<{ job: Job; backgroundColor: String; tagColor: String; textColor: String }>()
-const emit = defineEmits(['click'])
+  defineProps<{ job: Job; backgroundColor: string; tagColor: string; textColor: string }>()
+
+defineEmits(['click'])
 
 const backgroundClasses = computed(() => ({
   [`bg-${props.backgroundColor}-100`]: true
@@ -37,28 +39,34 @@ const textClasses = computed(() => ({
 </script>
 
 <template>
-  <div class="mb-12" @click="$emit('click', job.uuid)">
+  <div
+    class="mb-12"
+    @click="$emit('click', job.uuid)"
+  >
     <div class="flex flex-col md:flex-row w-full lg:w-10/12">
       <div class="md:mr-4 mb-2 md:mb-0 md:w-4/12">
         <div :class="backgroundClasses">
           <img
-            width="640"
-            height="360"
+            width="640px"
+            height="360px"
             class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out"
             alt="thumbnail"
             :src="job.thumbnailImageURL"
-        /></div>
+          >
+        </div>
       </div>
 
       <div class="flex-1">
         <div class="hover:text-green-400">
-          <h2 class="text-2xl font-semibold mb-1">{{ job.name }}</h2>
+          <h2 class="text-2xl font-semibold mb-1">
+            {{ job.name }}
+          </h2>
         </div>
 
-        <p :class="textClasses"
-          >Learn how to use Markdown to write blog posts. Understand front-matter and how it is used
-          in templates.</p
-        >
+        <p :class="textClasses">
+          Learn how to use Markdown to write blog posts. Understand front-matter and how it is used
+          in templates.
+        </p>
 
         <div class="mb-2">
           <div
@@ -66,8 +74,9 @@ const textClasses = computed(() => ({
             :key="tag.id"
             :class="tagBackgroundClasses"
             href="/category/development"
-            >{{ tag.name }}</div
           >
+            {{ tag.name }}
+          </div>
         </div>
       </div>
     </div>

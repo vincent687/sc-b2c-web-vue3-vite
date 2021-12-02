@@ -11,7 +11,9 @@ export default {
 <template>
   <Container>
     <div class="h-screen w-100 flex justify-center items-center">
-      <div class="text-xl">Not Found</div>
+      <div class="text-xl">
+        Not Found
+      </div>
     </div>
   </Container>
 </template>

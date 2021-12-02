@@ -127,6 +127,10 @@ https://the-guild.dev/blog/graphql-codegen-best-practices
 
 https://altair.sirmuel.design/
 
+# Lint
+
+https://eslint.vuejs.org/rules
+
 # TODOs
 
 - [x] Tailwindcss w/ JIT

@@ -3,19 +3,22 @@
     <div class="carousel-inner relative overflow-hidden w-full">
       <!--Slide 1-->
       <input
+        id="carousel-1"
         class="carousel-open"
         type="radio"
-        id="carousel-1"
         name="carousel"
         aria-hidden="true"
         hidden=""
         checked="checked"
-      />
-      <div class="carousel-item absolute opacity-0" style="height: 50vh">
+      >
+      <div
+        class="carousel-item absolute opacity-0"
+        style="height: 50vh"
+      >
         <img
           class="w-full"
           src="https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
-        />
+        >
         <!-- <div class="block h-full w-full bg-indigo-500 text-white text-5xl text-center">Slide 1</div> -->
       </div>
       <label
@@ -44,8 +47,7 @@
           left-0
           my-auto
         "
-        >‹</label
-      >
+      >‹</label>
       <label
         for="carousel-2"
         class="
@@ -72,23 +74,25 @@
           right-0
           my-auto
         "
-        >›</label
-      >
+      >›</label>
 
       <!--Slide 2-->
       <input
+        id="carousel-2"
         class="carousel-open"
         type="radio"
-        id="carousel-2"
         name="carousel"
         aria-hidden="true"
         hidden=""
-      />
-      <div class="carousel-item absolute opacity-0" style="height: 50vh">
+      >
+      <div
+        class="carousel-item absolute opacity-0"
+        style="height: 50vh"
+      >
         <img
           class="w-full"
           src="https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg"
-        />
+        >
         <!-- <div class="block h-full w-full bg-orange-500 text-white text-5xl text-center">Slide 2</div> -->
       </div>
       <label
@@ -117,8 +121,7 @@
           left-0
           my-auto
         "
-        >‹</label
-      >
+      >‹</label>
       <label
         for="carousel-3"
         class="
@@ -145,20 +148,24 @@
           right-0
           my-auto
         "
-        >›</label
-      >
+      >›</label>
 
       <!--Slide 3-->
       <input
+        id="carousel-3"
         class="carousel-open"
         type="radio"
-        id="carousel-3"
         name="carousel"
         aria-hidden="true"
         hidden=""
-      />
-      <div class="carousel-item absolute opacity-0" style="height: 50vh">
-        <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">Slide 3</div>
+      >
+      <div
+        class="carousel-item absolute opacity-0"
+        style="height: 50vh"
+      >
+        <div class="block h-full w-full bg-green-500 text-white text-5xl text-center">
+          Slide 3
+        </div>
       </div>
       <label
         for="carousel-2"
@@ -186,8 +193,7 @@
           left-0
           my-auto
         "
-        >‹</label
-      >
+      >‹</label>
       <label
         for="carousel-1"
         class="
@@ -214,8 +220,7 @@
           right-0
           my-auto
         "
-        >›</label
-      >
+      >›</label>
 
       <!-- Add additional indicators for each slide-->
       <ol class="carousel-indicators">
@@ -223,22 +228,19 @@
           <label
             for="carousel-1"
             class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
-            >•</label
-          >
+          >•</label>
         </li>
         <li class="inline-block mr-3">
           <label
             for="carousel-2"
             class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
-            >•</label
-          >
+          >•</label>
         </li>
         <li class="inline-block mr-3">
           <label
             for="carousel-3"
             class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700"
-            >•</label
-          >
+          >•</label>
         </li>
       </ol>
     </div>

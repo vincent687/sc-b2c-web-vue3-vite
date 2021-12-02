@@ -30,6 +30,6 @@ onMounted(() => {
 })
 </script>
 <template>
-  <Carousel></Carousel>
-  <Main :post-state="postState"></Main>
+  <Carousel />
+  <Main :post-state="postState" />
 </template>

@@ -6,10 +6,10 @@ import Container from '@components/Container.vue'
 
 <template>
   <Container>
-    <Header></Header>
+    <Header />
   </Container>
 
   <router-view />
 
-  <Footer></Footer>
+  <Footer />
 </template>
