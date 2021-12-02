@@ -3,13 +3,12 @@
   import { computed } from 'vue'
   import { Job } from '../model/job'
 
-  const props =
-    defineProps<{
-      job: Job
-      backgroundColor: string
-      tagColor: string
-      textColor: string
-    }>()
+  const props = defineProps<{
+    job: Job
+    backgroundColor: string
+    tagColor: string
+    textColor: string
+  }>()
 
   defineEmits(['click'])
 
@@ -51,7 +50,14 @@
           <img
             width="640px"
             height="360px"
-            class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out"
+            class="
+              rounded
+              mb-3
+              hover:opacity-70
+              transition
+              duration-300
+              ease-in-out
+            "
             alt="thumbnail"
             :src="job.thumbnailImageURL"
           />

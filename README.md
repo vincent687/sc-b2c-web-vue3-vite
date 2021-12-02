@@ -130,12 +130,25 @@ https://altair.sirmuel.design/
 # Lint / Prettier
 
 https://eslint.vuejs.org/rules
+https://stylelint.io/user-guide/get-started/
 
 ```sh
 yarn lint:script
 yarn lint:script --fix
 yarn prettier -w -u .
 ```
+
+## Caveats - stylelint v14 is not stable yet for vue3/postcss-html
+
+```json
+"stylelint": "^13.13.1",
+"stylelint-config-standard": "^22.0.0",
+"stylelint-scss": "^3.21.0",
+```
+
+### References
+
+https://miyauchi.dev/posts/vite-vue3-typescript/
 
 # TODOs
 
