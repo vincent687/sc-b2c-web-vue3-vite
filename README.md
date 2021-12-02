@@ -136,6 +136,7 @@ https://stylelint.io/user-guide/get-started/
 yarn lint:script
 yarn lint:script --fix
 yarn prettier -w -u .
+yarn lint:style
 ```
 
 ## Caveats - stylelint v14 is not stable yet for vue3/postcss-html
