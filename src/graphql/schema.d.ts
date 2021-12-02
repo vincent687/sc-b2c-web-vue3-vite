@@ -1,8 +1,14 @@
 export type Maybe<T> = T | null
 export type InputMaybe<T> = Maybe<T>
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] }
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> }
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> }
+export type Exact<T extends { [key: string]: unknown }> = {
+  [K in keyof T]: T[K]
+}
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>
+}
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>
+}
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string
@@ -31,7 +37,7 @@ export type AdditionalQuestionInput = {
 
 export enum AgeOption {
   Gte18 = 'gte18',
-  Lt18 = 'lt18'
+  Lt18 = 'lt18',
 }
 
 export type AppBanner = {
@@ -71,19 +77,22 @@ export type ApplicationInfo = {
   minAge?: Maybe<Scalars['Int']>
 }
 
-export type ApplicationRecord = EventApplication | EventAttendance | JobAttendance
+export type ApplicationRecord =
+  | EventApplication
+  | EventAttendance
+  | JobAttendance
 
 export enum ApplicationRecordFilter {
   ConfirmedSchedule = 'confirmedSchedule',
   FinishedRecord = 'finishedRecord',
   OtherRecord = 'otherRecord',
-  PendingSchedule = 'pendingSchedule'
+  PendingSchedule = 'pendingSchedule',
 }
 
 export enum ApplicationRecordType {
   EventApplication = 'eventApplication',
   EventAttendance = 'eventAttendance',
-  JobAttendance = 'jobAttendance'
+  JobAttendance = 'jobAttendance',
 }
 
 export type CodeValue = {
@@ -149,12 +158,12 @@ export type CreateJobApplicationInput = {
 
 export enum DayOfWeekOption {
   HasWeekday = 'hasWeekday',
-  HasWeekend = 'hasWeekend'
+  HasWeekend = 'hasWeekend',
 }
 
 export enum DestinationType {
   App = 'app',
-  Web = 'web'
+  Web = 'web',
 }
 
 export type District = {
@@ -236,7 +245,7 @@ export type Event = {
 
 export enum EventAdmissionType {
   CheckIn = 'checkIn',
-  Ticket = 'ticket'
+  Ticket = 'ticket',
 }
 
 export type EventApplication = {
@@ -293,7 +302,7 @@ export type EventAppliedSchedule = {
 
 export enum EventApproval {
   Instant = 'instant',
-  Manual = 'manual'
+  Manual = 'manual',
 }
 
 export type EventAttendance = {
@@ -329,12 +338,12 @@ export enum EventFeeTypeAvailability {
   Available = 'available',
   AvailableSoon = 'availableSoon',
   NotAvailable = 'notAvailable',
-  SoldOut = 'soldOut'
+  SoldOut = 'soldOut',
 }
 
 export enum EventFilterMode {
   And = 'AND',
-  Or = 'OR'
+  Or = 'OR',
 }
 
 export type EventOption = {
@@ -377,7 +386,7 @@ export type EventOption = {
 export enum EventOptionType {
   Custom = 'custom',
   Date = 'date',
-  Time = 'time'
+  Time = 'time',
 }
 
 export type EventPaymentType = {
@@ -391,12 +400,12 @@ export type EventPaymentType = {
 
 export enum EventPaymentTypeGroup {
   PayAtTheDoor = 'payAtTheDoor',
-  Stripe = 'stripe'
+  Stripe = 'stripe',
 }
 
 export enum EventQuotaType {
   NoLimit = 'noLimit',
-  TotalQuota = 'totalQuota'
+  TotalQuota = 'totalQuota',
 }
 
 export type EventRundownSession = {
@@ -439,7 +448,7 @@ export enum EventStatusCode {
   Completed = 'completed',
   Draft = 'draft',
   Full = 'full',
-  Published = 'published'
+  Published = 'published',
 }
 
 export type EventTicketItem = {
@@ -456,7 +465,7 @@ export type EventTicketItem = {
 
 export enum EventTypeCode {
   Activity = 'activity',
-  Service = 'service'
+  Service = 'service',
 }
 
 export type EventsFilter = {
@@ -574,7 +583,7 @@ export type FindUnitsParams = {
 export enum Gender {
   Female = 'female',
   Male = 'male',
-  NotProvided = 'notProvided'
+  NotProvided = 'notProvided',
 }
 
 export type Job = {
@@ -684,7 +693,7 @@ export enum JobAttendanceStatus {
   Declined = 'declined',
   OnHold = 'onHold',
   Pending = 'pending',
-  Reserved = 'reserved'
+  Reserved = 'reserved',
 }
 
 export type JobLocation = {
@@ -763,7 +772,7 @@ export type JobsFilter = {
 export enum Locale {
   En = 'en',
   ZhHans = 'zhHans',
-  ZhHant = 'zhHant'
+  ZhHant = 'zhHant',
 }
 
 export type LoginResponse = {
@@ -1051,7 +1060,7 @@ export enum ParentalConsentStatus {
   Accepted = 'accepted',
   Cancelled = 'cancelled',
   Declined = 'declined',
-  OnHold = 'onHold'
+  OnHold = 'onHold',
 }
 
 export type Payment = {
@@ -1070,7 +1079,7 @@ export enum PaymentCategory {
   Adhoc = 'adhoc',
   Event = 'event',
   Membership = 'membership',
-  Volunteer = 'volunteer'
+  Volunteer = 'volunteer',
 }
 
 export type PinResponse = {
@@ -1248,7 +1257,7 @@ export type SocialCv = {
 export enum SocialCvItemType {
   Event = 'event',
   Info = 'info',
-  Job = 'job'
+  Job = 'job',
 }
 
 export type SocialCvParams = {
@@ -1422,9 +1431,16 @@ export type FetchJobDetailsQuery = {
         overallEnd?: any | null | undefined
         jobLink?: string | null | undefined
         location?: string | null | undefined
-        applicationRestrictions?: Array<string | null | undefined> | null | undefined
+        applicationRestrictions?:
+          | Array<string | null | undefined>
+          | null
+          | undefined
         ngo?:
-          | { __typename?: 'Ngo'; id?: number | null | undefined; name?: string | null | undefined }
+          | {
+              __typename?: 'Ngo'
+              id?: number | null | undefined
+              name?: string | null | undefined
+            }
           | null
           | undefined
         prerequisite?:

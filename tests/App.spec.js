@@ -14,7 +14,7 @@ describe('App.spec.js', function () {
     // expect(wrapper.text()).to.contain('vincent')
 
     jest.mock('axios', () => ({
-      get: Promise.resolve('value')
+      get: Promise.resolve('value'),
     }))
 
     await flushPromises()

@@ -1,8 +1,12 @@
 <script setup lang="ts">
-defineProps<{ message: String }>()
+  import { defineProps } from 'vue'
+
+  defineProps<{ message: string }>()
 </script>
 
 <template>
   <div class="text-xl">Error</div>
-  <div class="text-sm">{{ message }}</div>
+  <div class="text-sm">
+    {{ message }}
+  </div>
 </template>

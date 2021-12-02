@@ -10,17 +10,17 @@ export default defineConfig({
     alias: [
       {
         find: '@pages',
-        replacement: path.resolve(__dirname, './src/pages')
+        replacement: path.resolve(__dirname, './src/pages'),
       },
       {
         find: '@components',
-        replacement: path.resolve(__dirname, './src/components')
+        replacement: path.resolve(__dirname, './src/components'),
       },
       {
         find: '@contexts',
-        replacement: path.resolve(__dirname, './src/contexts')
-      }
-    ]
+        replacement: path.resolve(__dirname, './src/contexts'),
+      },
+    ],
   },
   plugins: [
     vue(),
@@ -33,7 +33,7 @@ export default defineConfig({
       setupProdMockServer();
     `,
       logger: false,
-      supportTs: false
-    })
-  ]
+      supportTs: false,
+    }),
+  ],
 })

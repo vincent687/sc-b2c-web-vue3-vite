@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Container from '@components/Container.vue'
+  import Container from '@components/Container.vue'
 </script>
 
 <script lang="ts">
-export default {
-  layout: 'raw'
-}
+  export default {
+    layout: 'raw',
+  }
 </script>
 
 <template>
