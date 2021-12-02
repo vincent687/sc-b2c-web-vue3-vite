@@ -7,8 +7,8 @@
       >
         <img
           class="mr-2"
-          height="160px"
-          width="160px"
+          height="160"
+          width="160"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
         />
@@ -22,8 +22,8 @@
         href="/"
       >
         <img
-          height="160px"
-          width="160px"
+          height="160"
+          width="160"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
         />
