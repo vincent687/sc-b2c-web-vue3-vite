@@ -127,9 +127,15 @@ https://the-guild.dev/blog/graphql-codegen-best-practices
 
 https://altair.sirmuel.design/
 
-# Lint
+# Lint / Prettier
 
 https://eslint.vuejs.org/rules
+
+```sh
+yarn lint:script
+yarn lint:script --fix
+yarn prettier -w -u .
+```
 
 # TODOs
 

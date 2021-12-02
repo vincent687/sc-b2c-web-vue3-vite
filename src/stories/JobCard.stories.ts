@@ -12,8 +12,8 @@ export default {
     onClick: {},
     job: {},
     tagColor: { control: 'color' },
-    textColor: { control: 'color' }
-  }
+    textColor: { control: 'color' },
+  },
 }
 
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
@@ -25,7 +25,7 @@ const Template: Story<typeof JobCard> = (args) => ({
     return { args }
   },
   // And then the `args` are bound to your component with `v-bind="args"`
-  template: '<job-card v-bind="args" />'
+  template: '<job-card v-bind="args" />',
 })
 
 export const GreenTag = Template.bind({})
@@ -45,30 +45,30 @@ GreenTag.args = {
       {
         id: 1,
         name: 'No Poverty',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 2,
         name: 'Quality Education',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 3,
         name: 'Decent Work',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 4,
         name: '導師/教師',
-        color: 'grey'
+        color: 'grey',
       },
       {
         id: 5,
         name: '管理工作',
-        color: 'grey'
-      }
-    ]
-  }
+        color: 'grey',
+      },
+    ],
+  },
 }
 
 export const RedTag = Template.bind({})
@@ -88,30 +88,30 @@ RedTag.args = {
       {
         id: 1,
         name: 'No Poverty',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 2,
         name: 'Quality Education',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 3,
         name: 'Decent Work',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 4,
         name: '導師/教師',
-        color: 'grey'
+        color: 'grey',
       },
       {
         id: 5,
         name: '管理工作',
-        color: 'grey'
-      }
-    ]
-  }
+        color: 'grey',
+      },
+    ],
+  },
 }
 
 export const RedText = Template.bind({})
@@ -131,30 +131,30 @@ RedText.args = {
       {
         id: 1,
         name: 'No Poverty',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 2,
         name: 'Quality Education',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 3,
         name: 'Decent Work',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 4,
         name: '導師/教師',
-        color: 'grey'
+        color: 'grey',
       },
       {
         id: 5,
         name: '管理工作',
-        color: 'grey'
-      }
-    ]
-  }
+        color: 'grey',
+      },
+    ],
+  },
 }
 
 // export const Small = Template.bind({})

@@ -11,7 +11,7 @@
           width="160px"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
-        >
+        />
 
         <!-- <h2 class="text-2xl font-sans font-semibold"><strong>Social Career</strong></h2> -->
       </a>
@@ -26,15 +26,12 @@
           width="160px"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
-        >
+        />
 
         <h2 class="text-2xl font-sans font-semibold" />
       </a>
     </div>
-    <div
-      id="menu-trigger"
-      class=""
-    >
+    <div id="menu-trigger" class="">
       <svg
         aria-hidden="true"
         class="text-black"

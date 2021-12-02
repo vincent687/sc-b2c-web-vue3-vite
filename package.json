@@ -26,18 +26,22 @@
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/test-utils": "^2.0.0-rc.16",
     "autoprefixer": "9",
     "dotenv": "^10.0.0",
     "eslint": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.1.1",
     "flush-promises": "^1.0.2",
     "graphql-tag": "^2.12.6",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "mockjs": "^1.1.0",
     "postcss": "7",
     "postcss-import": "^14.0.2",
-    "prettier": "^2.4.1",
+    "prettier": "^2.5.0",
     "puppeteer": "^11.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "ts-jest": "^27.0.7",
@@ -46,6 +50,15 @@
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-test": "^0.0.5",
     "vue-tsc": "^0.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,vue}": "eslint --fix",
+    "*": "prettier -w -u"
   },
   "license": "MIT"
 }

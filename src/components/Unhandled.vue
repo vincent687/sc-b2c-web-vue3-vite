@@ -1,5 +1,3 @@
 <template>
-  <div class="text-xl">
-    Unhandled !!!
-  </div>
+  <div class="text-xl">Unhandled !!!</div>
 </template>

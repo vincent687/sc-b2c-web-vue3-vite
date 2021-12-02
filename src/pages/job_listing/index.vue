@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import SectionJobSlides from './components/SectionJobSlides.vue'
-import SectionHero from './components/SectionHero.vue'
+  import SectionJobSlides from './components/SectionJobSlides.vue'
+  import SectionHero from './components/SectionHero.vue'
 </script>
 
 <template>
@@ -13,8 +13,8 @@ import SectionHero from './components/SectionHero.vue'
       skip: 0,
       pageSize: 10,
       filter: {
-        volunteerFunctions: ['FEATURED']
-      }
+        volunteerFunctions: ['FEATURED'],
+      },
     }"
   />
 
@@ -25,8 +25,8 @@ import SectionHero from './components/SectionHero.vue'
       skip: 0,
       pageSize: 10,
       filter: {
-        volunteerFunctions: ['VISIT']
-      }
+        volunteerFunctions: ['VISIT'],
+      },
     }"
   />
 
@@ -37,8 +37,8 @@ import SectionHero from './components/SectionHero.vue'
       skip: 0,
       pageSize: 10,
       filter: {
-        volunteerFunctions: ['MICRO_VOLUNTEERING']
-      }
+        volunteerFunctions: ['MICRO_VOLUNTEERING'],
+      },
     }"
   />
 </template>

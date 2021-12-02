@@ -16,31 +16,31 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'Home',
-        component: () => import('@pages/home/index.vue')
+        component: () => import('@pages/home/index.vue'),
       },
       {
         path: 'jobs',
         name: 'JobListing',
-        component: () => import('@pages/job_listing/index.vue')
+        component: () => import('@pages/job_listing/index.vue'),
       },
       {
         path: 'jobs/:id',
         name: 'JobDetails',
-        component: () => import('@pages/job_details/index.vue')
+        component: () => import('@pages/job_details/index.vue'),
       },
       // will match everything and put it under `$route.params.pathMatch`
       {
         path: ':pathMatch(.*)*',
         name: 'NotFound',
-        component: () => import('@pages/not_found/index.vue')
-      }
-    ]
-  }
+        component: () => import('@pages/not_found/index.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 export function setupRoutes(app: App<Element>): void {

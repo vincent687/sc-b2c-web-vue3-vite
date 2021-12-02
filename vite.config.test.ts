@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     vue(),
     viteTestPlugin({
-      watch: true
+      watch: true,
     }),
     viteMockServe({
       mockPath: 'mock',
@@ -19,7 +19,7 @@ export default defineConfig({
       setupProdMockServer();
     `,
       logger: false,
-      supportTs: false
-    })
-  ]
+      supportTs: false,
+    }),
+  ],
 })

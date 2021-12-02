@@ -1,27 +1,33 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+  import { useRoute } from 'vue-router'
 
-import { useQuery } from 'villus'
-import { FetchJobDetailsQuery, FetchJobDetailsQueryVariables } from '../../graphql/schema'
-import { fetchJobDetailsQuery } from '../../graphql/queries'
+  import { useQuery } from 'villus'
+  import {
+    FetchJobDetailsQuery,
+    FetchJobDetailsQueryVariables,
+  } from '../../graphql/schema'
+  import { fetchJobDetailsQuery } from '../../graphql/queries'
 
-import Loading from '@components/Loading.vue'
-import Error from '@components/Error.vue'
-import Unhandled from '@components/Unhandled.vue'
-import SectionHero from './components/SectionHero.vue'
-import SectionSummary from './components/SectionSummary.vue'
-import Container from '@components/Container.vue'
-import SectionDescription from './components/SectionDescription.vue'
-import Separator from './components/Separator.vue'
+  import Loading from '@components/Loading.vue'
+  import Error from '@components/Error.vue'
+  import Unhandled from '@components/Unhandled.vue'
+  import SectionHero from './components/SectionHero.vue'
+  import SectionSummary from './components/SectionSummary.vue'
+  import Container from '@components/Container.vue'
+  import SectionDescription from './components/SectionDescription.vue'
+  import Separator from './components/Separator.vue'
 
-const route = useRoute()
+  const route = useRoute()
 
-const { data, isFetching, error } = useQuery<FetchJobDetailsQuery, FetchJobDetailsQueryVariables>({
-  query: fetchJobDetailsQuery,
-  variables: {
-    id: route.params.id as string
-  }
-})
+  const { data, isFetching, error } = useQuery<
+    FetchJobDetailsQuery,
+    FetchJobDetailsQueryVariables
+  >({
+    query: fetchJobDetailsQuery,
+    variables: {
+      id: route.params.id as string,
+    },
+  })
 </script>
 
 <template>

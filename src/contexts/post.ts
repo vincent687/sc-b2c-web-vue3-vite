@@ -61,7 +61,7 @@ export const usePostProvide = () => {
   provide<Context>(PostSymbol, {
     state: readonly(state),
     isLoading: readonly(isLoading),
-    load: loadPosts
+    load: loadPosts,
   })
 }
 

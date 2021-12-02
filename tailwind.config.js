@@ -15,24 +15,24 @@ module.exports = {
         indigo: colors.indigo,
         red: colors.rose,
         yellow: colors.amber,
-        peach: '#fa9470'
+        peach: '#fa9470',
       },
       gridTemplateColumns: {
         'job-slides': 'repeat(1, 200px)',
-        'job-slides--md': 'repeat(1, 300px)'
+        'job-slides--md': 'repeat(1, 300px)',
       },
       gridAutoColumns: {
         'job-slides': '200px',
-        'job-slides--md': '300px'
+        'job-slides--md': '300px',
       },
       gridTemplateRows: {
         'job-slides': 'minmax(250px, 1fr)',
-        'job-slides--md': 'minmax(300px, 1fr)'
-      }
-    }
+        'job-slides--md': 'minmax(300px, 1fr)',
+      },
+    },
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }

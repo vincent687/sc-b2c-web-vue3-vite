@@ -5,7 +5,7 @@ const userInfo = {
   email: 'vincentwong687@gmail.com',
   title: 'programmer',
   country: '香港',
-  address: '123'
+  address: '123',
 }
 
 const postInfo = [
@@ -16,34 +16,35 @@ const postInfo = [
     participantCount: '1',
     participantTotal: '',
     places: ['全港'],
-    tumbnail: 'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
+    tumbnail:
+      'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
     tags: [
       {
         id: 1,
         name: 'No Poverty',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 2,
         name: 'Quality Education',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 3,
         name: 'Decent Work',
-        color: 'red'
+        color: 'red',
       },
       {
         id: 4,
         name: '導師/教師',
-        color: 'grey'
+        color: 'grey',
       },
       {
         id: 5,
         name: '管理工作',
-        color: 'grey'
-      }
-    ]
+        color: 'grey',
+      },
+    ],
   },
   {
     id: 2,
@@ -52,50 +53,52 @@ const postInfo = [
     participantCount: '1',
     participantTotal: '4',
     places: ['屯門'],
-    tumbnail: 'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
+    tumbnail:
+      'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
     tags: [
       {
         id: 1,
         name: '另類專業協助',
-        color: 'grey'
-      }
-    ]
-  }
+        color: 'grey',
+      },
+    ],
+  },
 ]
 
 const postDetail = {
   id: 1,
   title: '競技同樂日-手語傳譯義工',
-  image: 'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
+  image:
+    'https://jekyll-atlantic.netlify.app/assets/images/unsplash-CTivHyiTbFw-640x360.jpeg',
   description:
     '依據會計準則和公司會計制度規定，編制公司合併報表和內部管理報表，按要求向股東單位、外部機構報送、披露相關財務資訊，為管理決策提供財務分析資料。審核、監督、指導下屬公司的報表編制工作，及時處理報表編制中出現的問題；',
   tags: [
     {
       id: 1,
       name: 'No Poverty',
-      color: 'red'
+      color: 'red',
     },
     {
       id: 2,
       name: 'Quality Education',
-      color: 'red'
+      color: 'red',
     },
     {
       id: 3,
       name: 'Decent Work',
-      color: 'red'
+      color: 'red',
     },
     {
       id: 4,
       name: '導師/教師',
-      color: 'grey'
+      color: 'grey',
     },
     {
       id: 5,
       name: '管理工作',
-      color: 'grey'
-    }
-  ]
+      color: 'grey',
+    },
+  ],
 }
 const userTestMock = [
   {
@@ -104,7 +107,7 @@ const userTestMock = [
     method: 'get',
     response: () => {
       return userInfo
-    }
+    },
   },
   {
     url: '/api/posts',
@@ -112,7 +115,7 @@ const userTestMock = [
     method: 'get',
     response: () => {
       return postInfo
-    }
+    },
   },
   {
     url: '/api/post',
@@ -120,8 +123,8 @@ const userTestMock = [
     method: 'get',
     response: () => {
       return postDetail
-    }
-  }
+    },
+  },
   // {
   //   url: new RegExp('/api/post' + '.*').source,
   //   timeout: 1000,

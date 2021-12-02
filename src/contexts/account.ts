@@ -54,7 +54,7 @@ export const useAccountProvide = () => {
   provide<Context>(AccountSymbol, {
     state: readonly(state),
     isLoading: readonly(isLoading),
-    load: loadAccount
+    load: loadAccount,
   })
 }
 
