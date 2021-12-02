@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
   import { defineProps, defineEmits } from 'vue'
   import { computed } from 'vue'
   import { Job } from '../model/job'
@@ -89,4 +89,4 @@
       </div>
     </div>
   </div>
-</template>
+</template> -->
