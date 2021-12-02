@@ -6,9 +6,7 @@
         href="/"
       >
         <img
-          class="mr-2"
-          height="160"
-          width="160"
+          class="mr-2 w-40"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
         />
@@ -22,8 +20,7 @@
         href="/"
       >
         <img
-          height="160"
-          width="160"
+          class="w-40"
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
         />
