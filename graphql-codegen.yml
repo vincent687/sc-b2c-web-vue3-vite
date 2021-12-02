@@ -2,7 +2,7 @@ hooks:
   afterAllFileWrite:
     - prettier --write
 
-schema: 'http://api.sit.salut.socialcareer.org/graphql'
+schema: 'https://api.sit.salut.socialcareer.org/graphql'
 # schema: "https://gateway.api.salut.socialcareer.org/graphql"
 documents: './src/graphql/queries.ts'
 generates:

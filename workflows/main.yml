@@ -1,0 +1,41 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  Test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16.13.0
+      - run: ls -al
+      - run: yarn
+      # - run: yarn test:ci
+      # - run: yarn test:e2e:ci
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 16.13.0
+      - run: ls -al
+      - run: yarn
+      - run: yarn build
+      - name: Publish to Netlify
+        uses: nwtgck/actions-netlify@v1.1.11
+        with:
+          publish-dir: ./dist
+        env:
+          NETLIFY_AUTH_TOKEN: qs88q9HfMTpl6B_GM9WJMgdW_v88kZdxM00rHnkC0OA
+          NETLIFY_SITE_ID: 47e84ec1-0904-4904-a442-74d04df43832
