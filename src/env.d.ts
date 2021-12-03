@@ -7,3 +7,12 @@ declare module '*.vue' {
   >
   export default component
 }
+
+interface ImportMetaEnv {
+  readonly VITE_I18N_LOCALE: string
+  // more env variables...
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}
