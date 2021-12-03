@@ -12,8 +12,8 @@ const i18n = createI18n<[MessageSchema], 'en-US' | 'zh'>({
   locale: 'en-US',
   messages: {
     'en-US': enUS,
-    zh: zh
-  }
+    zh: zh,
+  },
 })
 
 const app = createApp(App)
