@@ -156,13 +156,13 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
-- [ ] Linter / commit hook
-- [ ] GraphQL client setup
+- [x] Linter / commit hook
+- [x] GraphQL client setup
 - [ ] CICD (Github Actions)
 - [ ] Deploy to staging
 - [ ] Storybook
 - [ ] Custom font
-- [ ] i18n
+- [x] i18n
 - [ ] PWA
 - [ ] SSR
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
