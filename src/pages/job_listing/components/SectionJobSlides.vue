@@ -19,12 +19,11 @@
 
   const router = useRouter()
 
-  const props =
-    defineProps<{
-      backgroundColor: string
-      title: string
-      filterParams: FindJobsParams
-    }>()
+  const props = defineProps<{
+    backgroundColor: string
+    title: string
+    filterParams: FindJobsParams
+  }>()
 
   const { data, isFetching, error } = useQuery<
     FetchJobListQuery,
