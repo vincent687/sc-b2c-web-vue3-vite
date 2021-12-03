@@ -20,6 +20,10 @@ export default defineConfig({
         find: '@contexts',
         replacement: path.resolve(__dirname, './src/contexts'),
       },
+      {
+        find: '@lang',
+        replacement: path.resolve(__dirname, './lang'),
+      },
     ],
   },
   plugins: [
