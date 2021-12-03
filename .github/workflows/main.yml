@@ -33,5 +33,5 @@ jobs:
         with:
           publish-dir: ./dist
         env:
-          NETLIFY_AUTH_TOKEN: qs88q9HfMTpl6B_GM9WJMgdW_v88kZdxM00rHnkC0OA
-          NETLIFY_SITE_ID: 47e84ec1-0904-4904-a442-74d04df43832
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
