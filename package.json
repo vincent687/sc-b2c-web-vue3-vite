@@ -16,7 +16,7 @@
     "graphql": "^16.0.1",
     "villus": "^1.0.1",
     "vue": "^3.2.16",
-    "vue-i18n": "^9.2.0-beta.22",
+    "vue-i18n": "^9.2.0-beta.2",
     "vue-router": "4",
     "vue-router-layout": "^0.4.0"
   },
