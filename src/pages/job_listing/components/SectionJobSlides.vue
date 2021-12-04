@@ -6,11 +6,11 @@
   import JobSlides from './JobSlides.vue'
   import Loading from './Loading.vue'
   import Empty from './Empty.vue'
-  import Unhandled from '@components/Unhandled.vue'
-  import Error from '@components/Error.vue'
-  import Container from '@components/Container.vue'
+  import Unhandled from '@/components/Unhandled.vue'
+  import Error from '@/components/Error.vue'
+  import Container from '@/components/Container.vue'
 
-  import { FetchJobList } from '@contexts/job_listing'
+  import { FetchJobList } from '@/contexts/job_listing'
   import {
     FindJobsParams,
     FetchJobListQuery,

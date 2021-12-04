@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { defineProps } from 'vue'
-  import { Job } from '@contexts/job_details'
+  import { Job } from '@/contexts/job_details'
 
   defineProps<{ job: Job }>()
 </script>
