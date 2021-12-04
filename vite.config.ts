@@ -1,6 +1,5 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import { viteMockServe } from 'vite-plugin-mock'
 
 import vue from '@vitejs/plugin-vue'
 
@@ -26,18 +25,5 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [
-    vue(),
-    viteMockServe({
-      mockPath: 'mock',
-      localEnabled: true,
-      prodEnabled: false,
-      injectCode: `
-      import { setupProdMockServer } from './mockProdServer';
-      setupProdMockServer();
-    `,
-      logger: false,
-      supportTs: false,
-    }),
-  ],
+  plugins: [vue()],
 })

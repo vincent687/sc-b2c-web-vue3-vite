@@ -1,5 +1,7 @@
 # Social Career B2C Web PoT
 
+# Make up requirements
+
 ## User stories
 
 - users in home page can see list of sectons starting from top: hero banner, recommended jobs, latest jobs, hot jobs
@@ -123,9 +125,27 @@ https://www.graphql-code-generator.com/docs/getting-started/installation
 
 https://the-guild.dev/blog/graphql-codegen-best-practices
 
+```sh
+yarn generate
+```
+
 ## Debug tools
 
 https://altair.sirmuel.design/
+
+# Tests
+
+## Unit test
+
+```sh
+yarn test
+```
+
+## E2e test
+
+```sh
+yarn test:e2e
+```
 
 # Lint / Prettier
 
@@ -158,11 +178,11 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [ ] integration test - cypress [yarn test:ci]
 - [x] Linter / commit hook
 - [x] GraphQL client setup
-- [ ] CICD (Github Actions)
-- [ ] Deploy to staging
+- [x] CICD (Github Actions)
+- [x] Deploy to staging
 - [ ] Storybook
 - [ ] Custom font
 - [x] i18n
+- [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
 - [ ] PWA
 - [ ] SSR
-- [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
