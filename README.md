@@ -1,5 +1,7 @@
 # Social Career B2C Web PoT
 
+# Make up requirements
+
 ## User stories
 
 - users in home page can see list of sectons starting from top: hero banner, recommended jobs, latest jobs, hot jobs
@@ -18,7 +20,7 @@
 
 ## Prerequisites
 
-- node 16.9.1 / npm 7.21.1 / typescript 4.4.3
+- node 16.13.0 / npm 8.1.0 / typescript 4.5.2
 - vite 2.6.4
 - vue: 3.2.16
 
@@ -36,34 +38,25 @@
 
 [How this project created](./docs/How_This_Project_Created.md)
 
-## First time setup
+# Run this demo
+
+## first time setup
 
 ```sh
 yarn
 ```
 
-## Run app on local
+## run dev
 
 ```sh
 yarn dev
 ```
 
-## Run component test
+## run tests
 
 ```sh
 yarn test
-
-# headless mode
-yarn test:ci
-```
-
-## Run integration test
-
-```sh
 yarn test:e2e
-
-# headless mode
-yarn test:e2e:ci
 ```
 
 # TailwindCSS
@@ -123,9 +116,33 @@ https://www.graphql-code-generator.com/docs/getting-started/installation
 
 https://the-guild.dev/blog/graphql-codegen-best-practices
 
+```sh
+yarn generate
+```
+
 ## Debug tools
 
 https://altair.sirmuel.design/
+
+# Tests
+
+## Unit test
+
+```sh
+TODO
+```
+
+## Component test
+
+```sh
+yarn test
+```
+
+## E2e test
+
+```sh
+yarn test:e2e
+```
 
 # Lint / Prettier
 
@@ -156,13 +173,13 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
-- [x] Linter / commit hook
+- [ ] Linter / commit hook
 - [x] GraphQL client setup
-- [ ] CICD (Github Actions)
-- [ ] Deploy to staging
+- [x] CICD (Github Actions)
+- [x] Deploy to staging
 - [ ] Storybook
 - [ ] Custom font
 - [x] i18n
+- [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
 - [ ] PWA
 - [ ] SSR
-- [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
