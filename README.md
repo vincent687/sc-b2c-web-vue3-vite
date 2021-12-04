@@ -20,7 +20,7 @@
 
 ## Prerequisites
 
-- node 16.9.1 / npm 7.21.1 / typescript 4.4.3
+- node 16.13.0 / npm 8.1.0 / typescript 4.5.2
 - vite 2.6.4
 - vue: 3.2.16
 
@@ -38,34 +38,25 @@
 
 [How this project created](./docs/How_This_Project_Created.md)
 
-## First time setup
+# Run this demo
+
+## first time setup
 
 ```sh
 yarn
 ```
 
-## Run app on local
+## run dev
 
 ```sh
 yarn dev
 ```
 
-## Run component test
+## run tests
 
 ```sh
 yarn test
-
-# headless mode
-yarn test:ci
-```
-
-## Run integration test
-
-```sh
 yarn test:e2e
-
-# headless mode
-yarn test:e2e:ci
 ```
 
 # TailwindCSS
@@ -138,6 +129,12 @@ https://altair.sirmuel.design/
 ## Unit test
 
 ```sh
+TODO
+```
+
+## Component test
+
+```sh
 yarn test
 ```
 
@@ -176,7 +173,7 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
 - [ ] integration test - cypress [yarn test:ci]
-- [x] Linter / commit hook
+- [ ] Linter / commit hook
 - [x] GraphQL client setup
 - [x] CICD (Github Actions)
 - [x] Deploy to staging

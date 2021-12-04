@@ -8,6 +8,7 @@
   "extends": [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
+    "plugin:cypress/recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
     "@vue/prettier/@typescript-eslint"
