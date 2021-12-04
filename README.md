@@ -149,6 +149,14 @@ yarn test:e2e
 https://eslint.vuejs.org/rules
 https://stylelint.io/user-guide/get-started/
 
+## first time husky setup
+
+```sh
+npx husky-init && yarn
+```
+
+## run linter
+
 ```sh
 yarn lint:script
 yarn lint:script --fix

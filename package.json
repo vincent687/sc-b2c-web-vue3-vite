@@ -13,7 +13,8 @@
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "cypress": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@vincent687/storybook": "^0.0.0",
@@ -48,7 +49,7 @@
     "eslint-plugin-vue": "^8.1.1",
     "flush-promises": "^1.0.2",
     "graphql-tag": "^2.12.6",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "mockjs": "^1.1.0",
     "postcss": "7",
