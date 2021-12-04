@@ -1,5 +1,4 @@
 import type { App } from 'vue'
-import { i18n } from '../../lang/index'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { createRouterLayout } from 'vue-router-layout'
 
@@ -12,23 +11,7 @@ const RouterLayout = createRouterLayout((layout) => {
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'root',
-    redirect: import.meta.env.VITE_I18N_LOCALE,
-  },
-  {
-    path: '/:locale',
     component: RouterLayout,
-    beforeEnter: (to, from, next) => {
-      const locale = to.params.locale.toString()
-      const supportedLocales = import.meta.env.VITE_I18N_LOCALE.split(',')
-      if (!supportedLocales.includes(locale)) return next('en-US')
-
-      if (i18n.global.locale !== locale) {
-        i18n.global.locale = locale
-      }
-
-      return next()
-    },
     children: [
       {
         path: '',
