@@ -14,7 +14,7 @@
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
       "@contexts/*": ["./src/contexts/*"],
-      "@lang/*": ["./lang/*"]
+      "@lang/*": ["./src/lang/*"]
     }
   },
   "include": [

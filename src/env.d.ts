@@ -9,7 +9,7 @@ declare module '*.vue' {
 }
 
 interface ImportMetaEnv {
-  readonly VITE_I18N_LOCALE: string
+  readonly VITE_I18N_LOCALES: string
   // more env variables...
 }
 

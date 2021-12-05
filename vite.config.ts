@@ -22,7 +22,7 @@ export default defineConfig({
       },
       {
         find: '@lang',
-        replacement: path.resolve(__dirname, './lang'),
+        replacement: path.resolve(__dirname, './src/lang'),
       },
     ],
   },

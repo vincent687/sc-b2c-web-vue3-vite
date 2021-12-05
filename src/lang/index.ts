@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
-import enUS from '../src/locales/en-US.json'
-import zh from '../src/locales/zh.json'
+import enUS from '../locales/en-US.json'
+import zh from '../locales/zh.json'
 
 type MessageSchema = typeof enUS
 
