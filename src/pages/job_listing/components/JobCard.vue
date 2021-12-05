@@ -2,6 +2,7 @@
   import { defineProps, defineEmits } from 'vue'
   import { Job } from '@/contexts/job_listing'
   import { computed } from '@vue/reactivity'
+  import CardTitle from '@vincent687/sc-storybook/CardTitle.vue'
 
   const props = defineProps<{ job: Job }>()
 
@@ -29,11 +30,12 @@
         {{ job.ngo?.name }}
       </div>
 
-      <div class="hover:text-green-400">
+      <CardTitle :detail="job.title" hover-text-color="green"></CardTitle>
+      <!-- <div class="hover:text-green-400">
         <h2 class="text-lg font-semibold">
           {{ job.title }}
         </h2>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

@@ -1260,10 +1260,10 @@
     "@typescript-eslint/types" "5.5.0"
     eslint-visitor-keys "^3.0.0"
 
-"@vincent687/storybook@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@vincent687/storybook/-/storybook-0.0.0.tgz#79f599bbe0bcf82369ccc8674216702986949457"
-  integrity sha512-GlMDhmrmZjAzYOiRUTyljqcv5fVCKbWIQB7AcnDSkEPo4ceq3/5NBcTI4H9sMNgUCG+nWHs1zLSQoD7rsC4rBQ==
+"@vincent687/sc-storybook@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@vincent687/sc-storybook/-/sc-storybook-0.0.3.tgz#b1b54fc690984b57e36e4291b47103f2090369c6"
+  integrity sha512-TZihZ520Qf4FKT/k0gIwOwWn4wKJD2ufW+aucHC64tZfhq18WBiMwBiBACjrQr5QXITXp0TYj1rtZqBkZv9YoQ==
 
 "@vitejs/plugin-vue@^1.9.3":
   version "1.9.4"
