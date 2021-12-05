@@ -8,12 +8,12 @@
   } from '../../graphql/schema'
   import { fetchJobDetailsQuery } from '../../graphql/queries'
 
-  import Loading from '@components/Loading.vue'
-  import Error from '@components/Error.vue'
-  import Unhandled from '@components/Unhandled.vue'
+  import Loading from '@/components/Loading.vue'
+  import Error from '@/components/Error.vue'
+  import Unhandled from '@/components/Unhandled.vue'
   import SectionHero from './components/SectionHero.vue'
   import SectionSummary from './components/SectionSummary.vue'
-  import Container from '@components/Container.vue'
+  import Container from '@/components/Container.vue'
   import SectionDescription from './components/SectionDescription.vue'
   import Separator from './components/Separator.vue'
 

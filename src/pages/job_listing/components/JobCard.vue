@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { defineProps, defineEmits } from 'vue'
-  import { Job } from '@contexts/job_listing'
+  import { Job } from '@/contexts/job_listing'
   import { computed } from '@vue/reactivity'
 
   const props = defineProps<{ job: Job }>()
