@@ -1,8 +1,0 @@
-{
-  "name": "@vincent687/storybook",
-  "version": "0.0.0",
-  "publishConfig": {
-    "tag": "beta",
-    "access": "public"
-  }
-}
