@@ -1,17 +1,11 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
+  import { useLocaleInject } from '@/contexts/locale'
   import { useRouter } from 'vue-router'
-  import { ref, computed } from 'vue'
-  import { useI18n } from 'vue-i18n'
+
+  const { load } = useLocaleInject()
 
   const router = useRouter()
-  const path = computed(() => router.currentRoute.value.fullPath)
-  const i18n = useI18n()
-
-  const changeLocal = (locale: string) => {
-    i18n.locale.value = locale
-    let replacedPath = path.value.replace('en-US', locale).replace('zh', locale)
-    router.push(replacedPath)
-  }
 
   const showMenu = ref(false)
   const toggleNavbar = () => {
@@ -46,7 +40,7 @@
         <li v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`">
           <div
             class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            @click="changeLocal(locale)"
+            @click="load(locale, router)"
           >
             {{ locale }}
           </div>
