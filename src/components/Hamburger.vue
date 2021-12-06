@@ -3,7 +3,7 @@
   import { useLocaleInject } from '@/contexts/locale'
   import { useRouter } from 'vue-router'
 
-  const { load } = useLocaleInject()
+  const { change: changeLocale, currentLocale } = useLocaleInject()
 
   const router = useRouter()
 
@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div id="menu-trigger" class="relative" @click="toggleNavbar()">
+  <div class="relative cursor-pointer" @click="toggleNavbar()">
     <svg
       aria-hidden="true"
       class="text-black"
@@ -32,15 +32,18 @@
       />
     </svg>
     <div
-      id="dropdown"
       :class="{ hidden: !showMenu, flex: showMenu }"
       class="absolute right-0 bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700"
     >
       <ul class="py-1 w-full">
         <li v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`">
           <div
-            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-            @click="load(locale, router)"
+            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
+            :class="{
+              'text-lg': currentLocale === locale,
+              'text-red-500': currentLocale === locale,
+            }"
+            @click="changeLocale(locale, router)"
           >
             {{ locale }}
           </div>

@@ -5,8 +5,8 @@ import { Router } from 'vue-router'
 const LocaleSymbol = Symbol()
 
 export type Context = {
-  state: Ref<string>
-  load: (locale: string) => void
+  currentLocale: Ref<string>
+  change: (locale: string, router: Router) => void
 }
 
 export const useLocaleProvide = () => {
@@ -14,7 +14,7 @@ export const useLocaleProvide = () => {
 
   const state = ref<string>(i18n.locale.value)
 
-  const loadLocale = (locale: string, router: Router) => {
+  const changeLocale = (locale: string, router: Router) => {
     state.value = locale
     i18n.locale.value = locale
     changeLocalPath(locale, router)
@@ -29,8 +29,8 @@ export const useLocaleProvide = () => {
   }
 
   provide<Context>(LocaleSymbol, {
-    state: readonly(state),
-    load: loadLocale,
+    currentLocale: readonly(state),
+    change: changeLocale,
   })
 }
 

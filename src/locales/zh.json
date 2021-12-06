@@ -1,6 +1,9 @@
 {
   "jobListing": {
     "intro": "嘗試新體驗，幫助有需要的人，認識一世的朋友。",
-    "downloadApp":"立即下載手機APP"
+    "downloadApp": "立即下載手機APP"
+  },
+  "jobDetails": {
+    "description": "描述"
   }
 }

@@ -6,7 +6,9 @@
 </script>
 
 <template>
-  <div class="text-lg font-semibold mb-1">描述</div>
+  <div class="text-lg font-semibold mb-1">
+    {{ $t('jobDetails.description') }}
+  </div>
   <div class="text-sm text-gray-600 mb-1">
     {{ job.description }}
   </div>

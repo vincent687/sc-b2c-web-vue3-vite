@@ -31,11 +31,6 @@
       </div>
 
       <CardTitle :detail="job.title" hover-text-color="green"></CardTitle>
-      <!-- <div class="hover:text-green-400">
-        <h2 class="text-lg font-semibold">
-          {{ job.title }}
-        </h2>
-      </div> -->
     </div>
   </div>
 </template>

@@ -7,7 +7,7 @@
 
 <template>
   <div class="w-full h-52 sm:h-64 relative">
-    <router-link class="absolute top-6 left-6 bg-gray-300" :to="'/jobs'">
+    <router-link class="absolute top-6 left-6 bg-gray-300" :to="'/zh/jobs'">
       BACK TO JOBS
     </router-link>
     <img

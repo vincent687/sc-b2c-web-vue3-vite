@@ -14,8 +14,6 @@
           alt="Social Career"
           src="../assets/sc-logo-2021.svg"
         />
-
-        <!-- <h2 class="text-2xl font-sans font-semibold"><strong>Social Career</strong></h2> -->
       </a>
     </div>
     <div class="logo-mobile block md:hidden">
@@ -32,6 +30,6 @@
         <h2 class="text-2xl font-sans font-semibold" />
       </a>
     </div>
-    <Hamburger></Hamburger>
+    <Hamburger />
   </header>
 </template>

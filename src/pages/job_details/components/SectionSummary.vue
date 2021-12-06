@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <div class="text-xs text-gray-600 mb-1">
+  <div class="text-xs text-gray-600 mb-1 mt-4">
     {{ job.ngo?.name }}
   </div>
   <div class="text-lg font-semibold mb-1">
