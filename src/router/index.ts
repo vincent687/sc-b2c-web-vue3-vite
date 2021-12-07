@@ -34,7 +34,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: '',
-        name: 'Home',
+        // name: 'locale',
         component: () => import('@/pages/job_listing/index.vue'),
       },
       {
@@ -49,7 +49,8 @@ const routes: RouteRecordRaw[] = [
       },
       // will match everything and put it under `$route.params.pathMatch`
       {
-        path: ':pathMatch(.*)*',
+        // path: ':pathMatch(.*\\S.*)*',
+        path: ':pathMatch(.+)',
         name: 'NotFound',
         component: () => import('@/pages/not_found/index.vue'),
       },

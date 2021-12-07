@@ -30,7 +30,7 @@
         {{ job.ngo?.name }}
       </div>
 
-      <CardTitle :detail="job.title" hover-text-color="green"></CardTitle>
+      <CardTitle :detail="job.title" hover-text-color="red"></CardTitle>
     </div>
   </div>
 </template>
