@@ -10,74 +10,54 @@ const RouterLayout = createRouterLayout((layout) => {
 })
 
 const routes: RouteRecordRaw[] = [
-  // {
-  //   path: '/',
-  //   name: 'root',
-  //   redirect: `/${Locale.en}/jobs`,
-  // },
   {
     path: '/',
     name: 'root',
-    component: () => import('@/pages/job_listing/index.vue'),
+    redirect: `/${Locale.en}/jobs`,
   },
   {
-    path: '/jobs',
-    name: 'JobListing',
-    component: () => import('@/pages/job_listing/index.vue'),
-  },
-  {
-    path: '/jobs/:id',
-    name: 'JobDetails',
-    component: () => import('@/pages/job_details/index.vue'),
-  },
-  // will match everything and put it under `$route.params.pathMatch`
-  {
-    // path: ':pathMatch(.*\\S.*)*',
-    path: '/:pathMatch(.+)',
-    name: 'NotFound',
-    component: () => import('@/pages/not_found/index.vue'),
-  },
-  // {
-  //   path: '/:locale',
-  //   component: RouterLayout,
-  //   beforeEnter: (to, from, next) => {
-  //     const locale = to.params.locale.toString()
-  //     const supportedLocales = import.meta.env.VITE_I18N_LOCALES.split(',')
-  //     if (!supportedLocales.includes(locale)) {
-  //       return next(Locale.en)
-  //     }
+    path: '/:locale',
+    component: RouterLayout,
+    beforeEnter: (to, from, next) => {
+      const locale = to.params.locale.toString()
+      const supportedLocales = (
+        import.meta.env.VITE_I18N_LOCALES || `${Locale.en},${Locale.zh}`
+      ).split(',')
+      if (!supportedLocales.includes(locale)) {
+        return next(Locale.en)
+      }
 
-  //     if (i18n.global.locale !== locale) {
-  //       i18n.global.locale = locale
-  //     }
+      if (i18n.global.locale !== locale) {
+        i18n.global.locale = locale
+      }
 
-  //     return next()
-  //   },
-  //   children: [
-  //     {
-  //       path: '',
-  //       // name: 'locale',
-  //       component: () => import('@/pages/job_listing/index.vue'),
-  //     },
-  //     {
-  //       path: 'jobs',
-  //       name: 'JobListing',
-  //       component: () => import('@/pages/job_listing/index.vue'),
-  //     },
-  //     {
-  //       path: 'jobs/:id',
-  //       name: 'JobDetails',
-  //       component: () => import('@/pages/job_details/index.vue'),
-  //     },
-  //     // will match everything and put it under `$route.params.pathMatch`
-  //     {
-  //       // path: ':pathMatch(.*\\S.*)*',
-  //       path: ':pathMatch(.+)',
-  //       name: 'NotFound',
-  //       component: () => import('@/pages/not_found/index.vue'),
-  //     },
-  //   ],
-  // },
+      return next()
+    },
+    children: [
+      {
+        path: '',
+        // name: 'locale',
+        component: () => import('@/pages/job_listing/index.vue'),
+      },
+      {
+        path: 'jobs',
+        name: 'JobListing',
+        component: () => import('@/pages/job_listing/index.vue'),
+      },
+      {
+        path: 'jobs/:id',
+        name: 'JobDetails',
+        component: () => import('@/pages/job_details/index.vue'),
+      },
+      // will match everything and put it under `$route.params.pathMatch`
+      {
+        // path: ':pathMatch(.*\\S.*)*',
+        path: ':pathMatch(.+)',
+        name: 'NotFound',
+        component: () => import('@/pages/not_found/index.vue'),
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
