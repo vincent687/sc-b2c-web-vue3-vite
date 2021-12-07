@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import { i18n, Locale, AvailableLocales } from '@/lang/index'
+import { i18n, Locale } from '@/lang/index'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { createRouterLayout } from 'vue-router-layout'
 
