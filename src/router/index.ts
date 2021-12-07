@@ -37,6 +37,7 @@ const routes: RouteRecordRaw[] = [
     name: 'NotFound',
     component: () => import('@/pages/not_found/index.vue'),
   },
+
   // {
   //   path: '/:locale',
   //   component: RouterLayout,
