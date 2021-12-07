@@ -1,6 +1,6 @@
 describe('Jobs page', () => {
   context('Visiting jobs page', () => {
-    it('should editor choice section', () => {
+    it('should editor choice section', { defaultCommandTimeout: 10000 }, () => {
       cy.log('Visiting jobs page')
       cy.visit('/')
 
