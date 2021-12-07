@@ -23,6 +23,7 @@ const routes: RouteRecordRaw[] = [
       const supportedLocales = (
         import.meta.env.VITE_I18N_LOCALES || `${Locale.en},${Locale.zh}`
       ).split(',')
+
       if (!supportedLocales.includes(locale)) {
         return next(Locale.en)
       }

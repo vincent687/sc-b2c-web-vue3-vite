@@ -8,7 +8,7 @@
   } from '../../graphql/schema'
   import { fetchJobDetailsQuery } from '../../graphql/queries'
 
-  import Loading from '@/components/Loading.vue'
+  import Loading from './components/Loading.vue'
   import Error from '@/components/Error.vue'
   import Unhandled from '@/components/Unhandled.vue'
   import SectionHero from './components/SectionHero.vue'

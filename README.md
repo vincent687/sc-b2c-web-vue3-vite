@@ -172,7 +172,23 @@ yarn lint:style
 "stylelint-scss": "^3.21.0",
 ```
 
-### References
+# i18n
+
+## schema checking by TS
+
+```js
+// lang/index
+export const i18n = createI18n<[MessageSchema], AvailableLocales>({
+  locale: 'en-US',
+  messages: {
+    [Locale.en]: enUS,
+    [Locale.zh]: zh,
+  },
+})
+
+```
+
+# References
 
 https://miyauchi.dev/posts/vite-vue3-typescript/
 
@@ -189,5 +205,6 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [ ] Custom font
 - [x] i18n
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
-- [ ] PWA
 - [ ] SSR
+- [ ] SSG
+- [ ] PWA

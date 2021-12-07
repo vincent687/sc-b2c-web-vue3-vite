@@ -47,27 +47,43 @@
         {{ title }}
       </div>
 
-      <div v-if="isFetching">
-        <Loading />
-      </div>
+      <!-- explain on mode="out-in" -->
+      <!-- https://v3.vuejs.org/guide/transitions-enterleave.html#transition-modes -->
+      <transition name="fade" mode="out-in">
+        <div v-if="isFetching">
+          <Loading />
+        </div>
 
-      <div v-else-if="data && data?.jobs?.data">
-        <div v-if="data?.jobs?.data!.length! > 0">
-          <JobSlides :data="data?.jobs" @click-job="jobClicked" />
+        <div v-else-if="data && data?.jobs?.data">
+          <div v-if="data?.jobs?.data!.length! > 0">
+            <JobSlides :data="data?.jobs" @click-job="jobClicked" />
+          </div>
+
+          <div v-else>
+            <Empty />
+          </div>
+        </div>
+
+        <div v-else-if="error">
+          <Error :message="error?.message!" />
         </div>
 
         <div v-else>
-          <Empty />
+          <Unhandled />
         </div>
-      </div>
-
-      <div v-else-if="error">
-        <Error :message="error?.message!" />
-      </div>
-
-      <div v-else>
-        <Unhandled />
-      </div>
+      </transition>
     </Container>
   </div>
 </template>
+
+<style>
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+</style>
