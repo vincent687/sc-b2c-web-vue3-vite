@@ -4,7 +4,7 @@ describe('Jobs page', () => {
       cy.log('Visiting jobs page')
       cy.visit('/zh/jobs')
 
-      cy.log('Should see Editor Choices seection')
+      cy.log('Should see Editor Choices section')
       cy.findByText(/Editor Choices/i).should('be.visible')
     })
   })
