@@ -4,15 +4,14 @@
 
 ## User stories
 
-- users in home page can see list of sectons starting from top: hero banner, recommended jobs, latest jobs, hot jobs
-- users in home page can view auto-rotate carousel in section hero banner section
-- users in home page can view 10 jobs at max in sections recommended jobs, latest jobs, hot jobs
-- users in home page can navigate to job full-list page from corresponding jobs sections
-- users in home page can navigate to job details page from individual job card
-- users in job full-list page can lazy load jobs with infinite scroll
-- users in job full-list page can navigate to job details page from individual job card
-- users in job details page can see list of sectons starting from top: hero banner, job title, date, description, TBC
-- users in job details page can sign up a job
+- [x] users in home page can see list of sectons starting from top: hero banner, recommended jobs, latest jobs, hot jobs
+- [x] users in home page can view 10 jobs at max in sections recommended jobs, latest jobs, hot jobs
+- [ ] users in home page can navigate to job full-list page from corresponding jobs sections
+- [x] users in home page can navigate to job details page from individual job card
+- [ ] users in job full-list page can lazy load jobs with infinite scroll
+- [ ] users in job full-list page can navigate to job details page from individual job card
+- [x] users in job details page can see list of sectons starting from top: hero banner, job title, date, description, TBC
+- [ ] users in job details page can sign up a job
 
 ## Non functional requirements
 
@@ -196,15 +195,15 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 
 - [x] Tailwindcss w/ JIT
 - [ ] unit/component test [yarn test]
-- [ ] integration test - cypress [yarn test:ci]
-- [ ] Linter / commit hook
+- [x] integration test - cypress [yarn test:ci]
+- [x] Linter / commit hook
 - [x] GraphQL client setup
 - [x] CICD (Github Actions)
 - [x] Deploy to staging
-- [ ] Storybook
-- [ ] Custom font
+- [x] Storybook
 - [x] i18n
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
+- [ ] Custom font
 - [ ] SSR
 - [ ] SSG
 - [ ] PWA
