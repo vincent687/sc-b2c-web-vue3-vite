@@ -64,7 +64,8 @@ yarn test:e2e
 - [JIT](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css)
 - [purge](https://tailwindcss.com/docs/optimizing-for-production)
 - [dark mode](https://tailwindcss.com/docs/dark-mode)
-- headlessui
+- [font-families](https://tailwindcss.com/docs/font-family#font-families) (code: `font-sc`)
+- [headlessui](https://headlessui.dev/)
 
 # Vue3 features
 
@@ -78,7 +79,7 @@ https://v3.vuejs.org/api/sfc-script-setup.html#basic-syntax
 
 code example
 
-```vue
+```js
 TBC
 ```
 
@@ -93,6 +94,14 @@ https://next.router.vuejs.org/
 nested named views
 
 https://next.router.vuejs.org/guide/essentials/named-views.html#nested-named-views
+
+## SVG
+
+https://v3.vuejs.org/cookbook/editable-svg-icons.html#base-example
+
+https://github.com/sdras/vue-sample-svg-icons/
+
+https://sdras.github.io/vue-sample-svg-icons/
 
 ## Teleport
 
@@ -203,7 +212,7 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [x] Storybook
 - [x] i18n
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
-- [ ] Custom font
+- [x] Customize font
 - [ ] SSR
 - [ ] SSG
 - [ ] PWA

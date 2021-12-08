@@ -20,7 +20,7 @@
 
   <SectionJobSlides
     title="Visiting"
-    background-color="bg-grey-100"
+    background-color="bg-green-100 dark:bg-yellow-100"
     :filter-params="{
       skip: 0,
       pageSize: 10,
@@ -32,7 +32,7 @@
 
   <SectionJobSlides
     title="Happening Now"
-    background-color="bg-yellow-100"
+    background-color="bg-yellow-100 dark:bg-green-100"
     :filter-params="{
       skip: 0,
       pageSize: 10,

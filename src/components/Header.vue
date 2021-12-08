@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import Hamburger from './Hamburger.vue'
+  import Logo from './Logo.vue'
 </script>
 
 <template>
@@ -9,11 +10,7 @@
         class="flex items-center hover:opacity-70 transition duration-300 ease-in-out"
         href="/"
       >
-        <img
-          class="mr-2 w-40"
-          alt="Social Career"
-          src="../assets/sc-logo-2021.svg"
-        />
+        <Logo class="h-6 fill-current text-black dark:text-white"></Logo>
       </a>
     </div>
     <div class="logo-mobile block md:hidden">
@@ -21,11 +18,7 @@
         class="flex items-center hover:opacity-70 transition duration-300 ease-in-out"
         href="/"
       >
-        <img
-          class="w-40"
-          alt="Social Career"
-          src="../assets/sc-logo-2021.svg"
-        />
+        <Logo class="h-6 fill-current text-black dark:text-white"></Logo>
 
         <h2 class="text-2xl font-sans font-semibold" />
       </a>

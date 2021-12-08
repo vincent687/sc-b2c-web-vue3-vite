@@ -1,11 +1,16 @@
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Roboto"', ...defaultTheme.fontFamily.sans],
+        sc: ['"Redacted Script"', 'cursive', 'sans-serif'],
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -16,10 +21,6 @@ module.exports = {
         red: colors.rose,
         yellow: colors.amber,
         peach: '#fa9470',
-      },
-      gridTemplateColumns: {
-        'job-slides': 'repeat(1, 200px)',
-        'job-slides--md': 'repeat(1, 300px)',
       },
       gridAutoColumns: {
         'job-slides': '200px',
