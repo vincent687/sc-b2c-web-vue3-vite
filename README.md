@@ -64,6 +64,7 @@ yarn test:e2e
 - [JIT](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css)
 - [purge](https://tailwindcss.com/docs/optimizing-for-production)
 - [dark mode](https://tailwindcss.com/docs/dark-mode)
+- [font-families](https://tailwindcss.com/docs/font-family#font-families) (code: `font-sc`)
 - headlessui
 
 # Vue3 features
@@ -78,7 +79,7 @@ https://v3.vuejs.org/api/sfc-script-setup.html#basic-syntax
 
 code example
 
-```vue
+```js
 TBC
 ```
 
@@ -203,7 +204,7 @@ https://miyauchi.dev/posts/vite-vue3-typescript/
 - [x] Storybook
 - [x] i18n
 - [x] composition API (https://v3.vuejs.org/guide/composition-api-introduction.html#why-composition-api)
-- [ ] Custom font
+- [x] Customize font
 - [ ] SSR
 - [ ] SSG
 - [ ] PWA

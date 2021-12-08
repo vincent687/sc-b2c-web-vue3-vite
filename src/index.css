@@ -1,5 +1,7 @@
 /* stylelint-disable at-rule-no-unknown */
 
+@import url('https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300&display=swap');
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
