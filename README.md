@@ -65,7 +65,7 @@ yarn test:e2e
 - [purge](https://tailwindcss.com/docs/optimizing-for-production)
 - [dark mode](https://tailwindcss.com/docs/dark-mode)
 - [font-families](https://tailwindcss.com/docs/font-family#font-families) (code: `font-sc`)
-- headlessui
+- [headlessui](https://headlessui.dev/)
 
 # Vue3 features
 
@@ -94,6 +94,14 @@ https://next.router.vuejs.org/
 nested named views
 
 https://next.router.vuejs.org/guide/essentials/named-views.html#nested-named-views
+
+## SVG
+
+https://v3.vuejs.org/cookbook/editable-svg-icons.html#base-example
+
+https://github.com/sdras/vue-sample-svg-icons/
+
+https://sdras.github.io/vue-sample-svg-icons/
 
 ## Teleport
 

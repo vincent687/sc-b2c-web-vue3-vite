@@ -17,7 +17,7 @@
   <div class="relative cursor-pointer" @click="toggleNavbar()">
     <svg
       aria-hidden="true"
-      class="text-black"
+      class="text-black dark:text-white"
       data-icon="bars"
       data-prefix="fas"
       focusable="false"
@@ -41,7 +41,7 @@
             class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
             :class="{
               'text-lg': currentLocale === locale,
-              'text-red-500': currentLocale === locale,
+              'text-red-500 dark:text-red-500': currentLocale === locale,
             }"
             @click="changeLocale(locale, router)"
           >

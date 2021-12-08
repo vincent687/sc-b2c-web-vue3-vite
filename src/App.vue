@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="font-sans">
+  <div class="font-sans bg-white dark:bg-gray-700">
     <!-- <div class="font-sc"> -->
     <router-view />
   </div>

@@ -4,12 +4,12 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
         sans: ['"Roboto"', ...defaultTheme.fontFamily.sans],
-        sc: ['"Redacted Script"', 'cursive'],
+        sc: ['"Redacted Script"', 'cursive', 'sans-serif'],
       },
       colors: {
         transparent: 'transparent',
