@@ -1,6 +1,6 @@
 describe('Jobs page', () => {
   context('Visiting jobs page', () => {
-    it('should editor choice section', () => {
+    it('should show editor choice section', () => {
       cy.log('Visiting jobs page')
       cy.visit('/')
 
