@@ -7,11 +7,11 @@ const LocaleSymbol = Symbol()
 export type Context = {
   currentLocale: Ref<string>
   change: (locale: string, router: Router) => void
+  redirect: (distination: string) => string
 }
 
 export const useLocaleProvide = () => {
   const i18n = useI18n()
-
   const state = ref<string>(i18n.locale.value)
 
   const changeLocale = (locale: string, router: Router) => {
@@ -20,6 +20,10 @@ export const useLocaleProvide = () => {
     changeLocalPath(locale, router)
   }
 
+  const getRedirectPath = (distination: string) => {
+    const redirectPath = '/' + state.value + `/${distination}`
+    return redirectPath
+  }
   const changeLocalPath = (locale: string, router: Router) => {
     const path = computed(() => router.currentRoute.value.fullPath)
     const replacedPath = path.value
@@ -31,6 +35,7 @@ export const useLocaleProvide = () => {
   provide<Context>(LocaleSymbol, {
     currentLocale: readonly(state),
     change: changeLocale,
+    redirect: getRedirectPath,
   })
 }
 

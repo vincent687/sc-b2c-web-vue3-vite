@@ -2,7 +2,7 @@
   import { defineProps, defineEmits } from 'vue'
   import { Job } from '@/contexts/job_listing'
   import { computed } from '@vue/reactivity'
-  // import CardTitle from '@vincent687/sc-storybook/CardTitle.vue'
+  import CardTitle from '@vincent687/sc-storybook/CardTitle.vue'
 
   const props = defineProps<{ job: Job }>()
 
@@ -30,7 +30,7 @@
         {{ job.ngo?.name }}
       </div>
 
-      <!-- <CardTitle :detail="job.title" hover-text-color="red"></CardTitle> -->
+      <CardTitle :detail="job.title" hover-text-color="red"></CardTitle>
     </div>
   </div>
 </template>

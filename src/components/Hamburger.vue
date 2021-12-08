@@ -1,9 +1,11 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { useLocaleInject } from '@/contexts/locale'
+  import { useLocaleInject, useThemeInject } from '@/contexts'
   import { useRouter } from 'vue-router'
+  import { ThemeColor } from '@/contexts/theme'
 
   const { change: changeLocale, currentLocale } = useLocaleInject()
+  const { change: changeTheme, currentTheme } = useThemeInject()
 
   const router = useRouter()
 
@@ -46,6 +48,22 @@
             @click="changeLocale(locale, router)"
           >
             {{ locale }}
+          </div>
+        </li>
+        <li>
+          <div
+            v-if="currentTheme != ThemeColor.dark"
+            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
+            @click="changeTheme(ThemeColor.dark)"
+          >
+            Dark Theme
+          </div>
+          <div
+            v-else
+            class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
+            @click="changeTheme(ThemeColor.light)"
+          >
+            {{ ThemeColor.light }} Theme
           </div>
         </li>
       </ul>
