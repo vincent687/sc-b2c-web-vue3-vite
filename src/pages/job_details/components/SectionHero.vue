@@ -3,6 +3,7 @@
   import { Job } from '@/contexts/job_details'
   import { useLocaleInject } from '@/contexts'
   import Container from '@/components/Container.vue'
+  import { JobAttendanceStatus } from '../../../graphql/schema'
 
   defineProps<{ imageUrls: Job['imageUrls'] }>()
 
@@ -13,8 +14,11 @@
   <div class="w-full h-52 sm:h-64">
     <Container>
       <div class="relative">
-        <router-link class="absolute top-6 bg-gray-300" :to="redirect('jobs')">
-          BACK TO JOBS
+        <router-link
+          class="absolute top-6 bg-gray-300 text-xs"
+          :to="redirect('jobs')"
+        >
+          BACK TO Job
         </router-link>
       </div>
     </Container>

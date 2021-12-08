@@ -1,9 +1,9 @@
 import { useLocaleInject, useLocaleProvide } from './locale'
-import { useThemeInject, useThemeProvide } from './theme'
+import { useFontSizeInject, useFontSizeProvide } from './fontSize'
 
-export { useLocaleInject, useThemeInject }
+export { useLocaleInject, useFontSizeInject }
 
 export const useProvider = () => {
   useLocaleProvide()
-  useThemeProvide()
+  useFontSizeProvide()
 }

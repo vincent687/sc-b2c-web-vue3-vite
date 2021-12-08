@@ -3,13 +3,13 @@
   import Footer from '@/components/Footer.vue'
   import Container from '@/components/Container.vue'
 
-  import { useThemeInject } from '@/contexts'
+  import { useFontSizeInject } from '@/contexts'
 
-  const { currentTheme } = useThemeInject()
+  const { currentFontSize } = useFontSizeInject()
 </script>
 
 <template>
-  <div class="h-full bg-color">
+  <div class="font-resize">
     <Container>
       <Header />
     </Container>
@@ -27,10 +27,13 @@
 </template>
 
 <style>
-  .bg-color {
-    background-color: v-bind(currenttheme);
+  * {
+    font-size: v-bind(currentfontsize);
   }
 
+  /* .font-resize {
+    font-size: v-bind(currentFontSize);
+  } */
   .slide-fade-enter-active {
     transition: all 0.2s ease;
   }

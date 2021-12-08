@@ -1,11 +1,11 @@
 <script setup lang="ts">
   import { ref } from 'vue'
-  import { useLocaleInject, useThemeInject } from '@/contexts'
+  import { useLocaleInject, useFontSizeInject } from '@/contexts'
   import { useRouter } from 'vue-router'
-  import { ThemeColor } from '@/contexts/theme'
+  import { FontSize } from '@/contexts/fontSize'
 
   const { change: changeLocale, currentLocale } = useLocaleInject()
-  const { change: changeTheme, currentTheme } = useThemeInject()
+  const { change: changeFontSize, currentFontSize } = useFontSizeInject()
 
   const router = useRouter()
 
@@ -52,18 +52,18 @@
         </li>
         <li>
           <div
-            v-if="currentTheme != ThemeColor.dark"
+            v-if="currentFontSize != FontSize.header"
             class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
-            @click="changeTheme(ThemeColor.dark)"
+            @click="changeFontSize(FontSize.header)"
           >
-            Dark Theme
+            Enlarge
           </div>
           <div
             v-else
             class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white cursor-pointer"
-            @click="changeTheme(ThemeColor.light)"
+            @click="changeFontSize(FontSize.normal)"
           >
-            {{ ThemeColor.light }} Theme
+            Normal
           </div>
         </li>
       </ul>
