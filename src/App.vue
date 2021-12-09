@@ -3,15 +3,8 @@
   // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 
   import { useProvider } from './contexts'
-  import { useClient } from 'villus'
-  //import { useFontSizeInject } from '@/contexts'
 
   useProvider()
-  useClient({
-    url: 'https://api.sit.salut.socialcareer.org/graphql',
-    // url: 'https://gateway.api.salut.socialcareer.org/graphql'
-  })
-  //const { currentFontSize } = useFontSizeInject()
 </script>
 
 <template>
@@ -20,10 +13,3 @@
     <router-view />
   </div>
 </template>
-
-<style>
-  .font-resize {
-    /* font-size: v-bind(currentFontSize);
-  */
-  }
-</style>
