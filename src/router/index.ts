@@ -54,8 +54,8 @@ const routes: RouteRecordRaw[] = [
       {
         // path: ':pathMatch(.*\\S.*)*',
         path: ':pathMatch(.+)',
-        name: 'NotFound',
-        component: () => import('@/pages/not_found/index.vue'),
+        name: 'Playground',
+        component: () => import('@/pages/playground/index.vue'),
       },
     ],
   },

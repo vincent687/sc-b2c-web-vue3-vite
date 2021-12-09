@@ -32,16 +32,16 @@
   }
 
   .slide-fade-enter-active {
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
   }
 
   .slide-fade-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
   }
 
   .slide-fade-enter,
   .slide-fade-leave-to {
-    transform: translateX(20px);
+    transform: translateX(60px);
     opacity: 0;
   }
 </style>

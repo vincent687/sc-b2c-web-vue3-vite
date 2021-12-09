@@ -23,6 +23,7 @@
         <h2 class="text-2xl font-sans font-semibold" />
       </a>
     </div>
+
     <Hamburger />
   </header>
 </template>
