@@ -27,7 +27,9 @@
 
 <style>
   * {
-    font-size: v-bind(currentfontsize);
+    /* stylelint-disable */
+    font-size: v-bind(currentFontSize);
+    /* stylelint-enable */
   }
 
   .slide-fade-enter-active {
