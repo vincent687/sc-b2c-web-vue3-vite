@@ -1,13 +1,9 @@
 <script setup lang="ts">
   import { defineProps, defineEmits } from 'vue'
-  import { useRouter } from 'vue-router'
   import { computed } from '@vue/reactivity'
   import { Job } from '@/contexts/job_listing'
 
   const props = defineProps<{ job: Job }>()
-
-  const router = useRouter()
-
   const thumbnailUrl = computed(() =>
     props.job.imageUrls
       ? props.job.imageUrls[0]

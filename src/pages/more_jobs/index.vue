@@ -1,81 +1,63 @@
 <script setup lang="ts">
-  import { onMounted, ref, Ref, computed } from 'vue'
+  import { ref } from 'vue'
   import { useRoute } from 'vue-router'
-  import { FetchJobList } from '@/contexts/job_listing'
   import { useJobsInject } from '@/contexts'
-  import {
-    FindJobsParams,
-    FetchJobListQuery,
-    FetchJobListQueryVariables,
-  } from '../../graphql/schema'
-  import { useQuery, useClient } from 'villus'
   import JobCard from './components/JobCard.vue'
+  import { useRouter } from 'vue-router'
+  import { useLocaleInject } from '@/contexts'
+  import Container from '@/components/Container.vue'
+
+  const { redirect } = useLocaleInject()
 
   const route = useRoute()
-  const { state, load: loadJobs2 } = useJobsInject()
-  const jobs = loadJobs2({
-    skip: 0,
-    pageSize: 10,
-    filter: {
-      volunteerFunctions: [route.params.id.toString()],
-    },
-  })
-  // const getMore = (filter: FindJobsParams) => {
-  //   useClient({
-  //     url: 'https://api.sit.salut.socialcareer.org/graphql',
-  //   })
-  //   const { data } = useQuery<FetchJobListQuery, FetchJobListQueryVariables>({
-  //     query: FetchJobList,
-  //     variables: {
-  //       params: filter,
-  //     },
-  //   })
-  //   const products = computed(() => data.value?.jobs || [], {})
-  //   //setJobState(products)
-  //   return products
-  // }
+  const router = useRouter()
+  const { state, load } = useJobsInject()
 
-  // const test = () => {
-  //   jobs = getMore({
-  //     skip: 0,
-  //     pageSize: 10,
-  //     filter: {
-  //       volunteerFunctions: [route.params.id.toString()],
-  //     },
-  //   })
-  // }
-  // test()
+  const counter = ref(0)
 
-  //defineProps<{ data: FetchJobListQuery['jobs'] }>()
+  const loadPost = () => {
+    load({
+      skip: 4 * counter.value,
+      pageSize: 4,
+      filter: {
+        volunteerFunctions: [route.params.id.toString()],
+      },
+    })
+    counter.value++
+  }
+
+  const jobClicked = (uuid: string) => {
+    router.push({ name: 'JobDetails', params: { id: uuid } })
+  }
+
+  loadPost()
 </script>
 
 <template>
-  {{ state }}
-  <main class="py-6">
-    <div v-for="job in jobs?.data" :key="job.id!">
-      <JobCard :job="job" @click="$emit('click-job', job.id!)" />
+  <Container>
+    <div class="relative">
+      <router-link
+        class="absolute top-6 bg-gray-300 text-xs"
+        :to="redirect('jobs')"
+      >
+        BACK TO Job
+      </router-link>
     </div>
+  </Container>
 
-    <button
-      @click="
-        loadJobs2({
-          skip: 0,
-          pageSize: 10,
-          filter: {
-            volunteerFunctions: [route.params.id.toString()],
-          },
-        })
-      "
-    >
-      Load more
-    </button>
-    <!-- <div v-for="job in state.data" :key="job.id!">
-      <JobCard :job="job" @click="$emit('click-job', job.id!)" />
-    </div> -->
+  <main class="pt-24 container mx-auto px-2 md:px-2 lg:px-40">
+    <div v-if="state.status === 'success'">
+      <div v-for="job in state.data" :key="job.id!">
+        <JobCard :job="job" @click="jobClicked(job.id!)" />
+      </div>
 
-    <!-- <div v-if="postState.data">
-
-      <JobCard v-for="post in postState.data.info" :key="post.id" :post="post" />
-    </div> -->
+      <button
+        v-if="state.total > state.data.length"
+        class="w-full my-5 bg-yellow-400 hover:bg-yellow-300 text-white-700 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
+        @click="loadPost()"
+      >
+        Load more
+      </button>
+    </div>
   </main>
 </template>

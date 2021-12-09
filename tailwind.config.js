@@ -7,6 +7,9 @@ module.exports = {
   darkMode: 'media',
   theme: {
     extend: {
+      width: {
+        384: '96rem',
+      },
       fontFamily: {
         sans: ['"Roboto"', ...defaultTheme.fontFamily.sans],
         sc: ['"Redacted Script"', 'cursive', 'sans-serif'],

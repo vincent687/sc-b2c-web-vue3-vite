@@ -3,15 +3,7 @@
   // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 
   import { useProvider } from './contexts'
-  import { useClient } from 'villus'
-  import { createClient } from 'villus'
 
-  // useProvider()
-
-  useClient({
-    url: 'https://api.sit.salut.socialcareer.org/graphql',
-    // url: 'https://gateway.api.salut.socialcareer.org/graphql'
-  })
   useProvider()
 </script>
 

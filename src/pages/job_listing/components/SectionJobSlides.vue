@@ -47,10 +47,13 @@
 <template>
   <div class="pt-10 pb-1" :class="backgroundColor">
     <Container class="h-96">
-      <div class="text-2xl mb-3">
-        {{ title }}
+      <div class="flex flex-row">
+        <div class="w-384 text-2xl mb-3">
+          {{ title }}
+        </div>
         <router-link
-          class="bg-gray-300 text-xs"
+          v-if="data?.jobs?.data!.length! > 0"
+          class="text-xs"
           :to="
             redirect(`more_jobs/${filterParams.filter.volunteerFunctions[0]}`)
           "
