@@ -6,11 +6,12 @@
   import { useClient } from 'villus'
   //import { useFontSizeInject } from '@/contexts'
 
-  useProvider()
+  // useProvider()
   useClient({
     url: 'https://api.sit.salut.socialcareer.org/graphql',
     // url: 'https://gateway.api.salut.socialcareer.org/graphql'
   })
+  useProvider()
   //const { currentFontSize } = useFontSizeInject()
 </script>
 

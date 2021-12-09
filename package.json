@@ -17,7 +17,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@vincent687/sc-storybook": "0.0.3",
     "axios": "^0.24.0",
     "graphql": "^16.0.1",
     "villus": "^1.0.1",
@@ -37,6 +36,7 @@
     "@testing-library/cypress": "^8.0.2",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
+    "@vincent687/sc-storybook": "0.0.4",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
