@@ -1,21 +1,11 @@
-import {
-  Ref,
-  ref,
-  toRefs,
-  ComputedRef,
-  computed,
-  inject,
-  provide,
-  readonly,
-} from 'vue'
+import { Ref, ref, ComputedRef, computed, inject, provide } from 'vue'
 import { fetchJobListQuery } from '../graphql/queries'
 import {
   FindJobsParams,
   FetchJobListQuery,
   FetchJobListQueryVariables,
-  Maybe,
 } from '../graphql/schema'
-import { useQuery, useClient } from 'villus'
+import { useQuery, useClient, createClient, Client } from 'villus'
 import { data } from 'cypress/types/jquery'
 
 export type Job = NonNullable<NonNullable<FetchJobListQuery['jobs']>['data']>[0]
@@ -31,12 +21,11 @@ export type Data<T> = {
 const JobSymbol = Symbol()
 
 export type Context = {
-  state: Ref<never[]>
-  isLoading: Ref<boolean>
+  state: Ref<any>
+  //  isLoading: Ref<boolean>
   load: (
     filter: FindJobsParams
   ) => ComputedRef<FetchJobListQuery['jobs'] | never[]>
-  set: (jobs: FetchJobListQuery['jobs'] | never[]) => void
 }
 
 export type State =
@@ -51,17 +40,18 @@ export type State =
 
 export const useJobsProvide = () => {
   //const state = ref<State>({ status: 'init' })
-  const isLoading = computed(() => state.value.status === 'loading')
+  //const isLoading = computed(() => state.value.status === 'loading')
 
   const state = ref([])
   const setJobState = (jobs: FetchJobListQuery['jobs'] | never[]) => {
-    state.value.push(jobs?.data)
+    //state.value.push(jobs?.data)
   }
   const loadJobs1 = (filter: FindJobsParams) => {
-    useClient({
+    createClient({
       url: 'https://api.sit.salut.socialcareer.org/graphql',
       // url: 'https://gateway.api.salut.socialcareer.org/graphql'
     })
+
     const { data } = useQuery<FetchJobListQuery, FetchJobListQueryVariables>({
       query: FetchJobList,
       variables: {
@@ -80,7 +70,7 @@ export const useJobsProvide = () => {
 
   provide<Context>(JobSymbol, {
     state: state,
-    isLoading: readonly(isLoading),
+    //  isLoading: readonly(isLoading),
     load: loadJobs1,
   })
 }
