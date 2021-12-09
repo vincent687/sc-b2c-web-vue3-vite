@@ -10,14 +10,14 @@
 </script>
 
 <template>
-  <div class="w-full h-52 sm:h-64">
+  <div class="w-full h-52 sm:h-80">
     <Container>
       <div class="relative">
         <router-link
-          class="absolute top-6 bg-gray-300 text-xs"
+          class="absolute top-6 bg-gray-300 text-base opacity-70 p-4"
           :to="redirect('jobs')"
         >
-          BACK TO Job
+          Back
         </router-link>
       </div>
     </Container>

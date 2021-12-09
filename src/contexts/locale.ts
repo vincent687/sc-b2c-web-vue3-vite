@@ -1,3 +1,4 @@
+import { Locale } from '@/lang'
 import { computed, inject, provide, readonly, Ref, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Router } from 'vue-router'
@@ -24,11 +25,12 @@ export const useLocaleProvide = () => {
     const redirectPath = '/' + state.value + `/${distination}`
     return redirectPath
   }
+
   const changeLocalPath = (locale: string, router: Router) => {
     const path = computed(() => router.currentRoute.value.fullPath)
     const replacedPath = path.value
-      .replace('en-US', locale)
-      .replace('zh', locale)
+      .replace(Locale.en, locale)
+      .replace(Locale.zh, locale)
     router.push(replacedPath)
   }
 
