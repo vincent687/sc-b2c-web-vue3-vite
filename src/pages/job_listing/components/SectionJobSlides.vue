@@ -45,18 +45,18 @@
 <template>
   <div class="pt-10 pb-1" :class="backgroundColor">
     <Container class="h-96">
-      <div class="flex flex-row">
-        <div class="w-384 text-2xl mb-3">
+      <div class="flex flex-row justify-between">
+        <div class="text-2xl mb-3">
           {{ title }}
         </div>
         <router-link
           v-if="data?.jobs?.data!.length! > 0"
           class="text-xs"
           :to="
-            redirect(`more_jobs/${filterParams!.filter!.volunteerFunctions[0]}`)
+            redirect(`more_jobs/${filterParams?.filter?.volunteerFunctions![0]}`)
           "
         >
-          <Title detail="More" status="success"></Title>
+          <Title detail="See more >" status="success"></Title>
         </router-link>
       </div>
 

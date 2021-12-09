@@ -7,5 +7,5 @@ export { useLocaleInject, useFontSizeInject, useJobsInject }
 export const useProvider = () => {
   useLocaleProvide()
   useFontSizeProvide()
-  useJobsProvide()
+  // useJobsProvide()
 }
