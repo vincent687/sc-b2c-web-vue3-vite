@@ -51,15 +51,22 @@ https://sc-b2c.netlify.app
 ## developers can
 
 - run dev and see changes ⚡ fast
-- ensure every commit/MR pass e2e
+- write composable and reactive Vue codes
+- rapid styling with internal UI library
 - consume API with flexible schema
-- use widgets from internal UI library
+- ensure every commit/MR pass e2e & lint
 - write programmable SVG
 - ensure i18n keys are exhaustive
 
 ---
 
-## Vite
+## meet Vite
+
+- run dev and see changes ⚡ fast
+
+---
+
+## what is Vite ?
 
 - modern build tool
 - meaning "quick" in French <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -85,6 +92,18 @@ There is no bundling or compiling needed to start the dev server, so it's damn q
 You can see how the above allows the Hot Module Replacement to work efficiently. When you have a module that is changed, say the styles within a component, instead of reloading the entire component tree, only the style module needs to be replaced.
 
 Vite scales well for any app size because it only needs to request the modules for the route you're on.
+
+---
+
+##### demo time
+
+### how fast is Vite
+
+---
+
+## meet Vue 3
+
+- write composable and reactive Vue codes
 
 ---
 
@@ -129,9 +148,9 @@ https://v3.vuejs.org/guide/component-provide-inject.html#working-with-reactivity
 
 ---
 
-### `ref` vs `reactive`
-
 ##### demo time
+
+### `ref` vs `reactive`
 
 Note:
 
@@ -139,11 +158,11 @@ http://localhost:3000/en-US/playground
 
 ---
 
+##### demo time
+
 ### reactive provide/inject
 
-#### demo time
-
-###### [i18n]
+###### [user story: switch lanauge]
 
 Note:
 
@@ -151,11 +170,11 @@ switch language
 
 ---
 
+##### demo time
+
 ### data-driven dynamic CSS
 
-#### demo time
-
-###### [font for elderly]
+###### [user story: font for elderly]
 
 Note:
 
@@ -163,21 +182,32 @@ font-size: v-bind(currentFontSize);
 
 ---
 
-## TailwindCSS
+## meet TailwindCSS
+
+##### and Storybook
+
+- rapid styling with internal UI library
 
 ---
 
-## GraphQL
+## meet GraphQL
+
+##### and villus
+
+- consume API with flexible schema
 
 ---
 
-## Storybook
+## more
+
+- write programmable SVG
+- ensure i18n keys are exhaustive
 
 ---
 
 ## missing pizzles
 
-- where is Vuex ? [v4 here](https://next.vuex.vuejs.org/)
+- [Vuex 4](https://next.vuex.vuejs.org/)
 - SSR [(vite-ssr)](https://v3.vuejs.org/guide/ssr.html#vite-ssr)
 - SSG [(vite-ssg)](https://github.com/antfu/vite-ssg)
 - [Nuxt 3](https://v3.nuxtjs.org/getting-started/introduction#comparison)
