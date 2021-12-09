@@ -1,22 +1,7 @@
-import {
-  Ref,
-  ref,
-  toRefs,
-  ComputedRef,
-  computed,
-  inject,
-  provide,
-  readonly,
-} from 'vue'
+import { Ref, ref, computed, inject, provide, readonly } from 'vue'
 import { fetchJobListQuery } from '../graphql/queries'
-import {
-  FindJobsParams,
-  FetchJobListQuery,
-  FetchJobListQueryVariables,
-  Maybe,
-} from '../graphql/schema'
-import { useQuery, useClient } from 'villus'
-import { data } from 'cypress/types/jquery'
+import { FindJobsParams, FetchJobListQuery } from '../graphql/schema'
+import client from '../graphql/client'
 
 export type Job = NonNullable<NonNullable<FetchJobListQuery['jobs']>['data']>[0]
 
@@ -31,12 +16,10 @@ export type Data<T> = {
 const JobSymbol = Symbol()
 
 export type Context = {
-  state: Ref<never[]>
+  state: Ref<State>
   isLoading: Ref<boolean>
-  load: (
-    filter: FindJobsParams
-  ) => ComputedRef<FetchJobListQuery['jobs'] | never[]>
-  set: (jobs: FetchJobListQuery['jobs'] | never[]) => void
+  load: (filter: FindJobsParams) => Promise<Job[]>
+  set: (jobs: Job[]) => void
 }
 
 export type State =
@@ -44,44 +27,37 @@ export type State =
   | { status: 'loading' }
   | { status: 'empty' }
   | { status: 'error'; error: string }
-  | {
-      status: 'success'
-      data: FetchJobListQuery
-    }
+  | { status: 'success'; data: Job[] }
 
 export const useJobsProvide = () => {
-  //const state = ref<State>({ status: 'init' })
   const isLoading = computed(() => state.value.status === 'loading')
 
-  const state = ref([])
-  const setJobState = (jobs: FetchJobListQuery['jobs'] | never[]) => {
-    state.value.push(jobs?.data)
-  }
-  const loadJobs1 = (filter: FindJobsParams) => {
-    useClient({
-      url: 'https://api.sit.salut.socialcareer.org/graphql',
-      // url: 'https://gateway.api.salut.socialcareer.org/graphql'
-    })
-    const { data } = useQuery<FetchJobListQuery, FetchJobListQueryVariables>({
-      query: FetchJobList,
+  const state = ref<State>({ status: 'init' })
+
+  const loadJobs = async (filter: FindJobsParams) => {
+    const { data } = await client.executeQuery({
+      query: fetchJobListQuery,
       variables: {
         params: filter,
       },
     })
-    const products = computed(() => data.value?.jobs || [], {
-      onTrigger(e) {
-        // triggered when count.value is mutated
-        setJobState(data.value?.jobs)
-      },
-    })
-    //setJobState(products)
-    return products
+
+    console.log('fetchJobListQueryfetchJobListQuery', data)
+
+    const jobs: Job[] = data.jobs.data as Job[]
+
+    state.value = {
+      status: 'success',
+      data: jobs,
+    }
+
+    return jobs
   }
 
   provide<Context>(JobSymbol, {
-    state: state,
+    state: readonly(state),
     isLoading: readonly(isLoading),
-    load: loadJobs1,
+    load: loadJobs,
   })
 }
 
