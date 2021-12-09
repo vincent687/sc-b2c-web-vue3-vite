@@ -6,6 +6,5 @@ import './index.css'
 
 const app = createApp(App)
 setupRoutes(app)
-
 app.use(i18n)
 app.mount('#app')

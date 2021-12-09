@@ -2,7 +2,6 @@
   import { defineProps } from 'vue'
   import { useQuery } from 'villus'
   import { useRouter } from 'vue-router'
-
   import JobSlides from './JobSlides.vue'
   import Loading from './Loading.vue'
   import Empty from './Empty.vue'

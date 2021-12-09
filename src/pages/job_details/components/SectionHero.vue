@@ -3,7 +3,6 @@
   import { Job } from '@/contexts/job_details'
   import { useLocaleInject } from '@/contexts'
   import Container from '@/components/Container.vue'
-  import { JobAttendanceStatus } from '../../../graphql/schema'
 
   defineProps<{ imageUrls: Job['imageUrls'] }>()
 

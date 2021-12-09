@@ -2,7 +2,6 @@
   import Header from '@/components/Header.vue'
   import Footer from '@/components/Footer.vue'
   import Container from '@/components/Container.vue'
-
   import { useFontSizeInject } from '@/contexts'
 
   const { currentFontSize } = useFontSizeInject()
@@ -31,9 +30,6 @@
     font-size: v-bind(currentfontsize);
   }
 
-  /* .font-resize {
-    font-size: v-bind(currentFontSize);
-  } */
   .slide-fade-enter-active {
     transition: all 0.2s ease;
   }
