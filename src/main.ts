@@ -6,7 +6,6 @@ import './index.css'
 import client from './graphql/client'
 
 // Makes the villus client available to your app
-
 const app = createApp(App)
 setupRoutes(app)
 app.use(i18n)

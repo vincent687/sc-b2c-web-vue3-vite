@@ -1,6 +1,12 @@
 import { Ref, ref, computed, inject, provide, readonly } from 'vue'
 import { fetchJobListQuery } from '../graphql/queries'
-import { FindJobsParams, FetchJobListQuery } from '../graphql/schema'
+import {
+  FindJobsParams,
+  FetchJobListQuery,
+  InputMaybe,
+  Scalars,
+  JobsFilter,
+} from '../graphql/schema'
 import client from '../graphql/client'
 
 export type Job = NonNullable<NonNullable<FetchJobListQuery['jobs']>['data']>[0]
@@ -8,10 +14,6 @@ export type Job = NonNullable<NonNullable<FetchJobListQuery['jobs']>['data']>[0]
 export const FetchJobList = computed(() => {
   return fetchJobListQuery
 })
-
-export type Data<T> = {
-  info: T
-}
 
 const JobSymbol = Symbol()
 
@@ -26,14 +28,22 @@ export type State =
   | { status: 'loading' }
   | { status: 'empty' }
   | { status: 'error'; error: string }
-  | { status: 'success'; data: Job[] }
+  | { status: 'success'; data: Job[]; total: number }
 
 export const useJobsProvide = () => {
+  const jobListTmp = ref<Job[]>([])
+  const currentFilter = ref<InputMaybe<Scalars['String']>>('')
+
   const isLoading = computed(() => state.value.status === 'loading')
 
   const state = ref<State>({ status: 'init' })
 
   const loadJobs = async (filter: FindJobsParams) => {
+    if (currentFilter.value != filter!.filter!.volunteerFunctions[0]) {
+      currentFilter.value = filter!.filter!.volunteerFunctions[0]
+      jobListTmp.value = []
+    }
+
     const { data } = await client.executeQuery({
       query: fetchJobListQuery,
       variables: {
@@ -41,20 +51,18 @@ export const useJobsProvide = () => {
       },
     })
 
-    console.log('fetchJobListQueryfetchJobListQuery', data)
-
     const jobs: Job[] = data.jobs.data as Job[]
-
-    state.value = {
-      status: 'success',
-      data: jobs,
-    }
+    jobListTmp.value = jobListTmp.value.concat(jobs)
+    state.value =
+      data !== null
+        ? { status: 'success', data: jobListTmp.value, total: data.jobs.total }
+        : { status: 'error', error: 'unable to load account' }
 
     return jobs
   }
 
   provide<Context>(JobSymbol, {
-    state: readonly(state),
+    state: state,
     isLoading: readonly(isLoading),
     load: loadJobs,
   })
