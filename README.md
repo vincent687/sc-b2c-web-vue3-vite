@@ -137,7 +137,7 @@ https://altair.sirmuel.design/
 ## Unit test
 
 ```sh
-TODO
+TODO with jest
 ```
 
 ## Component test

@@ -48,6 +48,12 @@ https://sc-b2c.netlify.app
 
 ---
 
+##### demo time
+
+### demo sources at a glance
+
+---
+
 ## developers can
 
 - run dev and see changes ⚡ fast
@@ -285,6 +291,14 @@ https://villus.logaretm.com/
 
 ---
 
+##### demo time
+
+### GraphQL with context
+
+###### [user story: browse all jobs in category]
+
+---
+
 ## more
 
 - write programmable SVG
@@ -305,6 +319,12 @@ https://v3.vuejs.org/cookbook/editable-svg-icons.html#base-example
 https://github.com/sdras/vue-sample-svg-icons/
 
 https://sdras.github.io/vue-sample-svg-icons/
+
+---
+
+##### demo time
+
+### i18n keys are exhaustive
 
 ---
 
