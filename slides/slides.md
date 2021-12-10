@@ -251,6 +251,32 @@ Note:
 
 ---
 
+## GraphQL w/ villus
+
+- imperative vs composition
+- type safety
+
+Note:
+
+https://villus.logaretm.com/
+
+---
+
+##### demo time
+
+### GraphQL type safety
+
+```js
+// FetchJobListQuery in schema.d.ts
+export type Job = NonNullable<NonNullable<FetchJobDetailsQuery['job']>>
+```
+
+Note:
+
+https://villus.logaretm.com/
+
+---
+
 ## more
 
 - write programmable SVG
