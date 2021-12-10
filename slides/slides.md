@@ -188,6 +188,59 @@ font-size: v-bind(currentFontSize);
 
 - rapid styling with internal UI library
 
+Note:
+
+- [Extracting components](https://tailwindcss.com/docs/extracting-components)
+- [JIT](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css)
+- [purge](https://tailwindcss.com/docs/optimizing-for-production)
+- [dark mode](https://tailwindcss.com/docs/dark-mode)
+- [font-families](https://tailwindcss.com/docs/font-family#font-families) (code: `font-sc`)
+
+---
+
+## why TailwindCSS ?
+
+- utility first <!-- .element: class="fragment" data-fragment-index="1" -->
+- no more unnecessary CSS class invention <!-- .element: class="fragment" data-fragment-index="2" -->
+- responsive in blood <!-- .element: class="fragment" data-fragment-index="3" -->
+- highly extensible <!-- .element: class="fragment" data-fragment-index="4" -->
+- great for in-house design system <!-- .element: class="fragment" data-fragment-index="5" -->
+
+Note:
+
+https://tailwindcss.com/docs/utility-first
+
+---
+
+##### demo time
+
+### TailwindCSS dark mode
+
+###### [user story: toggle dark mode]
+
+Note:
+
+- [dark mode](https://tailwindcss.com/docs/dark-mode)
+
+---
+
+##### demo time
+
+### TailwindCSS custom font
+
+Note:
+
+- [font-families](https://tailwindcss.com/docs/font-family#font-families) (code: `font-sc`)
+
+---
+
+## TailwindCSS battery pack
+
+- [HeadlessUI](https://github.com/tailwindlabs/headlessui)
+- [TailwindUI](https://tailwindui.com/)
+- [TailwindCSS Forms](https://github.com/tailwindlabs/tailwindcss-forms)
+- [Awesome TailwindCSS](https://github.com/aniftyco/awesome-tailwindcss)
+
 ---
 
 ## meet GraphQL
@@ -202,6 +255,22 @@ font-size: v-bind(currentFontSize);
 
 - write programmable SVG
 - ensure i18n keys are exhaustive
+
+---
+
+##### demo time
+
+### programmable SVG
+
+###### [user story: toggle dark mode]
+
+Note:
+
+https://v3.vuejs.org/cookbook/editable-svg-icons.html#base-example
+
+https://github.com/sdras/vue-sample-svg-icons/
+
+https://sdras.github.io/vue-sample-svg-icons/
 
 ---
 
