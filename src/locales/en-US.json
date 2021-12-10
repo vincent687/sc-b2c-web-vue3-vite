@@ -4,6 +4,9 @@
     "downloadApp": "Download the mobile app now"
   },
   "jobDetails": {
-    "description": "Description"
+    "description": "Description",
+    "languages": "Languages",
+    "services": "Services",
+    "enquiry": "Enquiry"
   }
 }

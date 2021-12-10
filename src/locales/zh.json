@@ -4,6 +4,9 @@
     "downloadApp": "立即下載手機APP"
   },
   "jobDetails": {
-    "description": "描述"
+    "description": "描述",
+    "languages": "所需語言",
+    "services": "服務類別",
+    "enquiry": "查詢"
   }
 }

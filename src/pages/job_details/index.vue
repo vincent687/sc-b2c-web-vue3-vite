@@ -15,6 +15,8 @@
   import SectionSummary from './components/SectionSummary.vue'
   import Container from '@/components/Container.vue'
   import SectionDescription from './components/SectionDescription.vue'
+  import SectionContact from './components/SectionContact.vue'
+  import SectionTag from './components/SectionTag.vue'
   import Separator from './components/Separator.vue'
 
   const route = useRoute()
@@ -45,6 +47,23 @@
       <Separator />
 
       <SectionDescription :job="data.job" />
+      <Separator />
+
+      <SectionTag
+        :tags="data.job.volunteerFunctions"
+        :title="$t('jobDetails.services')"
+        type="success"
+      />
+      <Separator />
+
+      <SectionTag
+        :tags="data.job.languages"
+        :title="$t('jobDetails.languages')"
+        type="danger"
+      />
+      <Separator />
+
+      <SectionContact :job="data.job" />
       <Separator />
 
       <div class="mb-2" />

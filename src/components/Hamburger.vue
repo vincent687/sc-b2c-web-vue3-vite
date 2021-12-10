@@ -2,7 +2,7 @@
   import { ref } from 'vue'
   import { useLocaleInject, useFontSizeInject } from '@/contexts'
   import { useRouter } from 'vue-router'
-  import { FontSize } from '@/contexts/fontSize'
+  import { FontSize } from '@/contexts/font_size'
 
   const { change: changeLocale, currentLocale } = useLocaleInject()
   const { change: changeFontSize, currentFontSize } = useFontSizeInject()
