@@ -334,6 +334,7 @@ https://sdras.github.io/vue-sample-svg-icons/
 - SSR [(vite-ssr)](https://v3.vuejs.org/guide/ssr.html#vite-ssr)
 - SSG [(vite-ssg)](https://github.com/antfu/vite-ssg)
 - [Nuxt 3](https://v3.nuxtjs.org/getting-started/introduction#comparison)
+- [Migration from Vue 2](https://v3.vuejs.org/guide/migration/migration-build.html#overview)
 
 Note:
 
