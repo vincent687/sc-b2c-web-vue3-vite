@@ -39,7 +39,7 @@
 
       <button
         v-if="state.total > state.data.length"
-        class="w-full my-5 bg-yellow-400 hover:bg-yellow-300 text-white-700 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
+        class="w-full mb-12 bg-green-400 hover:bg-green-300 text-white text-xl font-semibold hover:text-white py-3 px-4 border border-green-500 hover:border-transparent rounded"
         @click="loadMoreJobs()"
       >
         Load more
